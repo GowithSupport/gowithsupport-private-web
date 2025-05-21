@@ -18,6 +18,10 @@ const Footer = () => {
             <p className="text-gray-300 mb-4">
               Enterprise-level technology and security solutions tailored for growing businesses.
             </p>
+            <div className="text-gray-300">
+              <p className="mb-1"><strong>Phone:</strong> <a href="tel:9492885312" className="hover:text-white">(949) 288-5312</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@gowithsupport.com" className="hover:text-white">info@gowithsupport.com</a></p>
+            </div>
             <div className="flex space-x-4 mt-6">
               <a href="#" className="text-white hover:text-gowith-light-blue transition-colors" aria-label="LinkedIn">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
