@@ -1,6 +1,5 @@
 
 import { Button } from './ui/button';
-import { Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PhoneButton from './ui/phone-button';
 

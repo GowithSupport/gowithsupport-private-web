@@ -10,7 +10,7 @@ import UseCaseSection from "../../components/UseCaseSection";
 import FinalCTA from "../../components/FinalCTA";
 import ContactForm from "../../components/ContactForm";
 import PhoneButton from "../../components/ui/phone-button";
-import { Headphones, MessageSquare, Video, Users, Mic } from 'lucide-react';
+import { Headphones, MessageSquare, Video, Users, Mic, Phone } from 'lucide-react';
 import { Card, CardContent } from "../../components/ui/card";
 import { 
   Carousel, 
@@ -160,6 +160,27 @@ const BusinessComms = () => {
           subtitle="Streamline your team collaboration and customer communications with an all-in-one solution" 
         />
         
+        {/* Work from Anywhere Section */}
+        <section className="py-16 bg-gowith-dark-blue text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Work from Anywhere</h2>
+              <p className="text-xl text-gowith-light-blue mb-6">
+                The telephone system for the modern workplace
+              </p>
+              <button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-3 rounded-md transition-colors text-lg font-medium">
+                Try Now
+              </button>
+            </div>
+            <div className="max-w-4xl mx-auto text-center mt-12">
+              <h3 className="text-2xl font-bold mb-4">All the features of a world-class cloud phone system in one app</h3>
+              <p className="text-lg text-gowith-light-blue">
+                Utilize one simple platform for all your important conversations and empower your business.
+              </p>
+            </div>
+          </div>
+        </section>
+        
         {/* Overview Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -173,11 +194,11 @@ const BusinessComms = () => {
         </section>
         
         {/* Platform UI Examples */}
-        <section className="py-16 bg-gowith-dark-blue">
+        <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Platform Interface</h2>
-              <p className="text-lg text-gowith-light-blue mb-8">
+              <h2 className="text-3xl font-bold text-gowith-dark-blue mb-4">Platform Interface</h2>
+              <p className="text-lg text-gray-600 mb-8">
                 Experience our intuitive, feature-rich communication platform designed for modern businesses
               </p>
             </div>
@@ -191,14 +212,10 @@ const BusinessComms = () => {
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
                             <img 
-                              src="/lovable-uploads/f45de574-9ec4-49ee-9707-2ad2e86354a9.png" 
-                              alt="Business Communications Platform - Chat Interface" 
+                              src="/lovable-uploads/ae064278-371c-4c0b-a8d5-5c1e57a9c7d1.png" 
+                              alt="An Advanced Phone System That Meets Today's Business Needs" 
                               className="w-full object-cover"
                             />
-                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                              <h3 className="font-bold text-lg">Unified Chat Interface</h3>
-                              <p>Seamlessly integrate messaging, calling, and video conferencing in one place</p>
-                            </div>
                           </div>
                         </CardContent>
                       </Card>
@@ -210,14 +227,70 @@ const BusinessComms = () => {
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
                             <img 
-                              src="/lovable-uploads/c6cbc608-205d-440b-8086-0ea40a594cd9.png" 
-                              alt="Business Communications Platform - Dashboard" 
+                              src="/lovable-uploads/73a7901d-ffe4-433c-ba2e-86355fbf9f00.png" 
+                              alt="Empower Your Team" 
                               className="w-full object-cover"
                             />
-                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                              <h3 className="font-bold text-lg">Admin Dashboard</h3>
-                              <p>Monitor performance, track analytics, and manage your communications ecosystem</p>
-                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex items-center justify-center p-6">
+                          <div className="relative overflow-hidden rounded-lg shadow-xl">
+                            <img 
+                              src="/lovable-uploads/d14591a0-5690-4ddf-99ca-b2144172f86c.png" 
+                              alt="Easy-To-Use And Effective Business Texting" 
+                              className="w-full object-cover"
+                            />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex items-center justify-center p-6">
+                          <div className="relative overflow-hidden rounded-lg shadow-xl">
+                            <img 
+                              src="/lovable-uploads/cdbfa0fa-7893-4974-9cc1-a27e1e325c14.png" 
+                              alt="Reimagine The Way You Meet" 
+                              className="w-full object-cover"
+                            />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex items-center justify-center p-6">
+                          <div className="relative overflow-hidden rounded-lg shadow-xl">
+                            <img 
+                              src="/lovable-uploads/33683319-9c3a-4e4c-aabb-6ebb320ff02e.png" 
+                              alt="Effective And Simple Team Collaboration" 
+                              className="w-full object-cover"
+                            />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex items-center justify-center p-6">
+                          <div className="relative overflow-hidden rounded-lg shadow-xl">
+                            <img 
+                              src="/lovable-uploads/4e5602a4-78e4-489f-a23f-17fbb354874a.png" 
+                              alt="Call Center Platform" 
+                              className="w-full object-cover"
+                            />
                           </div>
                         </CardContent>
                       </Card>
@@ -227,6 +300,94 @@ const BusinessComms = () => {
                 <CarouselPrevious className="lg:-left-16" />
                 <CarouselNext className="lg:-right-16" />
               </Carousel>
+            </div>
+          </div>
+        </section>
+        
+        {/* Reimagine The Way You Meet Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-gowith-dark-blue mb-8 text-center">Reimagine The Way You Meet</h2>
+              
+              <div className="space-y-8">
+                <div className="flex flex-col md:flex-row gap-6 items-start p-6 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div className="bg-gowith-light-blue p-4 rounded-full">
+                    <Video className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Connected on the go</h3>
+                    <p className="text-gray-600">
+                      You can switch from a phone call to a video meeting in a click between your desktop and mobile apps.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col md:flex-row gap-6 items-start p-6 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div className="bg-gowith-light-blue p-4 rounded-full">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Connect with your clients</h3>
+                    <p className="text-gray-600">
+                      Schedule or send invites to your contacts. Build trust and increase communication between your brand and clients.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col md:flex-row gap-6 items-start p-6 rounded-lg hover:bg-gray-50 transition-colors">
+                  <div className="bg-gowith-light-blue p-4 rounded-full">
+                    <MessageSquare className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Support and collaborate</h3>
+                    <p className="text-gray-600">
+                      With a selection of features designed to enhance and enable effective collaboration, screen sharing tool makes information sharing and collaboration more efficient and productive.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Integrations Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-gowith-dark-blue mb-4">SUPPORTED INTEGRATIONS</h2>
+              <p className="text-lg text-gray-600 mb-10">Connect the tools and services that you use every day to automate work for users.</p>
+              
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+                <img src="/lovable-uploads/78f1c851-2693-4f7f-8aa1-69d476dab217.png" alt="Supported integrations" className="w-full" />
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Unified Communications Platform Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-gowith-dark-blue mb-4">Unified Communications Platform</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  By centralizing global voice, and messaging into an all-in-one platform, LogixxVoice makes it easy for businesses to empower quality interactions without the complexity of traditional communication methods.
+                </p>
+                <p className="text-lg text-gray-600">
+                  With our industry-leading tools and insights, you will be able to master every conversation quickly, cost-effectively, and without disrupting your business.
+                </p>
+              </div>
+              
+              <div className="bg-gowith-light-blue bg-opacity-10 p-8 rounded-xl">
+                <h2 className="text-3xl font-bold text-gowith-dark-blue mb-4">Call Center Platform</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  All the tools you need for your call center are available in one easy-to-use, browser-based platform. Utilize real-time coaching, agent scripting, dynamic caller ID, and a unified interface for voice and digital interactions to improve customer relationships.
+                </p>
+                <p className="text-lg font-medium text-gowith-dark-blue">
+                  Are you still not convinced? Why not take a closer look and see for yourself?
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -259,7 +420,7 @@ const BusinessComms = () => {
               <div>
                 <h2 className="text-3xl font-bold text-gowith-dark-blue mb-6">Ready to Transform Your Business Communications?</h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Our Business Communications Platform is designed to help your business communicate more effectively, both internally and with customers. Schedule a personalized demo to see how our solution can work for your specific needs.
+                  Our Business Communications Platform is designed to help your business communicate more effectively, both internally and with customers. Contact us today to request a demo of our products and get an in-depth understanding of how it can help your business.
                 </p>
                 <div className="bg-white p-6 rounded-lg shadow-md mb-8">
                   <h3 className="text-xl font-bold text-gowith-dark-blue mb-4">What to Expect in Your Demo</h3>
@@ -288,10 +449,18 @@ const BusinessComms = () => {
               </div>
               
               <ContactForm 
-                formTitle="Schedule a Platform Demo" 
-                formDescription="Fill out the form below to schedule a personalized demonstration of our Business Communications Platform."
-                buttonText="Schedule Demo" 
+                formTitle="Request a Demo" 
+                formDescription="Fill out the form below and one of our experts will contact you shortly."
+                buttonText="Submit Request" 
                 formType="demo"
+                formFooter={
+                  <p className="text-xs text-gray-500 mt-4">
+                    You consent to receive calls, SMS, and emails from us by clicking submit. 
+                    Reply STOP to unsubscribe or HELP for further assistance. Message frequency varies and Msg&Data rates may apply. 
+                    Reply "unsubscribe" to opt-out. Calls may be connected using automated technology. 
+                    We will not rent or sell personal information about you.
+                  </p>
+                }
               />
             </div>
           </div>
