@@ -1,17 +1,14 @@
-
 import React from 'react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
 const ManagedIT = () => {
-  return (
-    <>
+  return <>
       <Navbar />
       <main>
         <section className="pt-32 pb-20 bg-gradient-to-r from-gowith-dark-blue to-gowith-medium-blue">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl font-bold text-white mb-6 md:text-2xl">
                 Comprehensive Managed IT Services
               </h1>
               <p className="text-xl text-gowith-light-blue mb-8">
@@ -159,10 +156,7 @@ const ManagedIT = () => {
               <div className="bg-gowith-dark-blue text-white p-8 rounded-lg text-center">
                 <h2 className="text-2xl font-bold mb-4">Experience Reliable, Proactive IT Management</h2>
                 <p className="mb-6">Take the first step towards optimizing your technology infrastructure</p>
-                <a 
-                  href="/contact" 
-                  className="inline-block bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-3 rounded-md transition-colors"
-                >
+                <a href="/contact" className="inline-block bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-3 rounded-md transition-colors">
                   Schedule Your Free IT Assessment
                 </a>
               </div>
@@ -171,8 +165,6 @@ const ManagedIT = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default ManagedIT;
