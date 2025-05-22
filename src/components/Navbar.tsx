@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Headset, Shield, Cloud, Briefcase, LineChart, MessageSquare, Scan, Code, Building, ShieldCheck, Stethoscope, Scale, Landmark, Factory, Laptop, Film, Building2, HeartHandshake } from 'lucide-react';
 import { Button } from './ui/button';
 import { 
   NavigationMenu,
@@ -45,7 +45,7 @@ const Navbar = () => {
         : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo - increased size slightly more */}
+        {/* Logo */}
         <Link to="/" className="flex items-center">
           <img 
             src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" 
@@ -67,30 +67,81 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 py-2">
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/managed-it" className="w-full text-gray-800 hover:text-gowith-dark-blue">Managed IT Services</Link>
+            <DropdownMenuContent className="grid grid-cols-2 gap-1 p-3 w-[400px]">
+              <DropdownMenuItem className="col-span-2 font-medium text-base border-b pb-2 mb-2 text-gowith-dark-blue">
+                Our Services
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/cybersecurity" className="w-full text-gray-800 hover:text-gowith-dark-blue">Cybersecurity Services</Link>
+              <DropdownMenuItem>
+                <Link to="/services/managed-it" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Headset className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>Managed IT Services</div>
+                    <div className="text-xs text-gray-500">Complete IT support and management</div>
+                  </div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/cloud" className="w-full text-gray-800 hover:text-gowith-dark-blue">Managed Cloud Services</Link>
+              <DropdownMenuItem>
+                <Link to="/services/cybersecurity" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Shield className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>Cybersecurity Services</div>
+                    <div className="text-xs text-gray-500">Protect your business data</div>
+                  </div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/professional" className="w-full text-gray-800 hover:text-gowith-dark-blue">Professional Services</Link>
+              <DropdownMenuItem>
+                <Link to="/services/cloud" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Cloud className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>Managed Cloud Services</div>
+                    <div className="text-xs text-gray-500">Cloud hosting and management</div>
+                  </div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/it-strategy" className="w-full text-gray-800 hover:text-gowith-dark-blue">IT Strategy</Link>
+              <DropdownMenuItem>
+                <Link to="/services/professional" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Briefcase className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>Professional Services</div>
+                    <div className="text-xs text-gray-500">Expert consulting and solutions</div>
+                  </div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/business-comms" className="w-full text-gray-800 hover:text-gowith-dark-blue">Business Comms Platform</Link>
+              <DropdownMenuItem>
+                <Link to="/services/it-strategy" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <LineChart className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>IT Strategy</div>
+                    <div className="text-xs text-gray-500">Strategic technology planning</div>
+                  </div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/face-id-auth" className="w-full text-gray-800 hover:text-gowith-dark-blue">Face ID Auth</Link>
+              <DropdownMenuItem>
+                <Link to="/services/business-comms" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <MessageSquare className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>Business Comms Platform</div>
+                    <div className="text-xs text-gray-500">Unified communications solution</div>
+                  </div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/services/web-dev-automation" className="w-full text-gray-800 hover:text-gowith-dark-blue">Web Dev Automation</Link>
+              <DropdownMenuItem>
+                <Link to="/services/face-id-auth" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Scan className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>Face ID Auth</div>
+                    <div className="text-xs text-gray-500">Biometric authentication system</div>
+                  </div>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/services/web-dev-automation" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Code className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>
+                    <div>Web Dev Automation</div>
+                    <div className="text-xs text-gray-500">AI-powered development tools</div>
+                  </div>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -102,12 +153,21 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 py-2">
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/insights/case-studies" className="w-full text-gray-800 hover:text-gowith-dark-blue">Case Studies</Link>
+            <DropdownMenuContent className="p-3 min-w-[250px]">
+              <DropdownMenuItem className="font-medium text-base border-b pb-2 mb-2 text-gowith-dark-blue">
+                Insights & Resources
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/insights/blog" className="w-full text-gray-800 hover:text-gowith-dark-blue">Blog</Link>
+              <DropdownMenuItem>
+                <Link to="/insights/case-studies" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Briefcase className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Case Studies</div>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/insights/blog" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <MessageSquare className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Blog</div>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -119,33 +179,63 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 py-2">
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/financial-services" className="w-full text-gray-800 hover:text-gowith-dark-blue">Financial Services</Link>
+            <DropdownMenuContent className="grid grid-cols-2 gap-1 p-3 w-[450px]">
+              <DropdownMenuItem className="col-span-2 font-medium text-base border-b pb-2 mb-2 text-gowith-dark-blue">
+                Industries We Serve
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/healthcare" className="w-full text-gray-800 hover:text-gowith-dark-blue">Healthcare</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/financial-services" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Landmark className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Financial Services</div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/legal" className="w-full text-gray-800 hover:text-gowith-dark-blue">Law Firms</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/healthcare" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Stethoscope className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Healthcare</div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/private-equity" className="w-full text-gray-800 hover:text-gowith-dark-blue">Private Equity</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/legal" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Scale className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Law Firms</div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/manufacturing" className="w-full text-gray-800 hover:text-gowith-dark-blue">Manufacturing</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/private-equity" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Building className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Private Equity</div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/technology" className="w-full text-gray-800 hover:text-gowith-dark-blue">Technology & Startups</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/manufacturing" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Factory className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Manufacturing</div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/entertainment" className="w-full text-gray-800 hover:text-gowith-dark-blue">Entertainment</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/technology" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Laptop className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Technology & Startups</div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/professional-services" className="w-full text-gray-800 hover:text-gowith-dark-blue">Professional Services</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/entertainment" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Film className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Entertainment</div>
+                </Link>
               </DropdownMenuItem>
-              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/non-profits" className="w-full text-gray-800 hover:text-gowith-dark-blue">Non-Profits</Link>
+              <DropdownMenuItem>
+                <Link to="/industries/professional-services" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <Building2 className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Professional Services</div>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link to="/industries/non-profits" className="w-full flex items-center gap-2 text-gray-800 hover:text-gowith-dark-blue">
+                  <HeartHandshake className="h-5 w-5 text-gowith-medium-blue" />
+                  <div>Non-Profits</div>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
