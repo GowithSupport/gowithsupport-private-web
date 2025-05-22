@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -10,7 +9,7 @@ import UseCaseSection from "../../components/UseCaseSection";
 import FinalCTA from "../../components/FinalCTA";
 import ContactForm from "../../components/ContactForm";
 import PhoneButton from "../../components/ui/phone-button";
-import { Headphones, MessageSquare, Video, Users, Mic, Phone } from 'lucide-react';
+import { Headphones, MessageSquare, Video, Users, Mic, Phone, Check } from 'lucide-react';
 import { Card, CardContent } from "../../components/ui/card";
 import { 
   Carousel, 
@@ -19,6 +18,9 @@ import {
   CarouselNext, 
   CarouselPrevious 
 } from "../../components/ui/carousel";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
+import { Button } from "../../components/ui/button";
+import { Link } from 'react-router-dom';
 
 const BusinessComms = () => {
   const features = [
@@ -177,6 +179,369 @@ const BusinessComms = () => {
               <p className="text-lg text-gowith-light-blue">
                 Utilize one simple platform for all your important conversations and empower your business.
               </p>
+            </div>
+          </div>
+        </section>
+        
+        {/* Pricing Section - NEW */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gowith-dark-blue mb-4">PLANS THAT WORK FOR YOUR BUSINESS-AND YOUR WALLET</h2>
+              <p className="text-xl text-gray-600 mb-8">LOGIXX VOICE FEATURES & PRICING MODEL</p>
+              <p className="text-lg text-gray-600">Everything you need to get started today</p>
+            </div>
+            
+            <div className="max-w-5xl mx-auto">
+              <Tabs defaultValue="annually" className="w-full mb-8">
+                <TabsList className="grid w-[200px] grid-cols-2 mx-auto">
+                  <TabsTrigger value="annually">Annually</TabsTrigger>
+                  <TabsTrigger value="monthly">Monthly</TabsTrigger>
+                </TabsList>
+                
+                <TabsContent value="annually" className="mt-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* Essentials Plan */}
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                      <div className="p-6 border-b">
+                        <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Essentials</h3>
+                        <p className="text-gray-600 mb-4">A reliable voice solution to get your business up and running</p>
+                        <div className="mb-4">
+                          <p className="text-sm text-gray-500">Starting at</p>
+                          <p className="text-4xl font-bold text-gowith-dark-blue">$24.95</p>
+                          <p className="text-sm text-gray-500">Per User*</p>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <p className="font-medium mb-4">Additional Features Include</p>
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Unlimited Calling</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>High-definition (HD) voice</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Desktop App (Windows, Mac)</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Mobile Apps (Apple, Android)</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Business Chat</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Business SMS & MMS</span>
+                          </li>
+                        </ul>
+                        <Button className="w-full bg-gowith-orange hover:bg-gowith-orange-hover">
+                          <Link to="/contact" className="w-full">Get started</Link>
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Standard Plan */}
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative">
+                      <div className="absolute top-0 right-0 bg-gowith-orange text-white px-3 py-1 text-sm font-medium">
+                        Popular
+                      </div>
+                      <div className="p-6 border-b">
+                        <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Standard</h3>
+                        <p className="text-gray-600 mb-4">A supercharged telephone system to help boost productivity and performance</p>
+                        <div className="mb-4">
+                          <p className="text-sm text-gray-500">Starting at</p>
+                          <p className="text-4xl font-bold text-gowith-dark-blue">$34.99</p>
+                          <p className="text-sm text-gray-500">Per User*</p>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <p className="font-medium mb-4">Includes Everything in Essentials, Plus</p>
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Ring Groups</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call log reports</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Audio Conferencing</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Video Conferencing</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Video Meeting & Recording</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Access to Zendesk, Hubspot, Google and Microsoft 365 contacts + apps</span>
+                          </li>
+                        </ul>
+                        <Button className="w-full bg-gowith-orange hover:bg-gowith-orange-hover">
+                          <Link to="/contact" className="w-full">Get started</Link>
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Enterprise Plan */}
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                      <div className="p-6 border-b">
+                        <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Enterprise</h3>
+                        <p className="text-gray-600 mb-4">A suite of complete and customized communications packages with powerful features for your business needs</p>
+                        <div className="mb-4">
+                          <p className="text-sm text-gray-500">Starting at</p>
+                          <p className="text-4xl font-bold text-gowith-dark-blue">$44.99</p>
+                          <p className="text-sm text-gray-500">Per User*</p>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        <p className="font-medium mb-4">Includes Everything in Standard, Plus</p>
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call Center Dashboard</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Supervisor Panel</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Live Monitoring & Coaching</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call Center Queues</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Dynamic Caller ID-Automated</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call Center Reporting</span>
+                          </li>
+                        </ul>
+                        <Button className="w-full bg-gowith-orange hover:bg-gowith-orange-hover">
+                          <Link to="/contact" className="w-full">Get started</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+                
+                <TabsContent value="monthly" className="mt-8">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {/* Monthly pricing content - same structure but with different prices */}
+                    {/* Essentials Plan Monthly */}
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                      <div className="p-6 border-b">
+                        <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Essentials</h3>
+                        <p className="text-gray-600 mb-4">A reliable voice solution to get your business up and running</p>
+                        <div className="mb-4">
+                          <p className="text-sm text-gray-500">Starting at</p>
+                          <p className="text-4xl font-bold text-gowith-dark-blue">$29.95</p>
+                          <p className="text-sm text-gray-500">Per User*</p>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        {/* Same features as annual */}
+                        <p className="font-medium mb-4">Additional Features Include</p>
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Unlimited Calling</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>High-definition (HD) voice</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Desktop App (Windows, Mac)</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Mobile Apps (Apple, Android)</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Business Chat</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Business SMS & MMS</span>
+                          </li>
+                        </ul>
+                        <Button className="w-full bg-gowith-orange hover:bg-gowith-orange-hover">
+                          <Link to="/contact" className="w-full">Get started</Link>
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Standard Plan Monthly */}
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow relative">
+                      <div className="absolute top-0 right-0 bg-gowith-orange text-white px-3 py-1 text-sm font-medium">
+                        Popular
+                      </div>
+                      <div className="p-6 border-b">
+                        <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Standard</h3>
+                        <p className="text-gray-600 mb-4">A supercharged telephone system to help boost productivity and performance</p>
+                        <div className="mb-4">
+                          <p className="text-sm text-gray-500">Starting at</p>
+                          <p className="text-4xl font-bold text-gowith-dark-blue">$39.99</p>
+                          <p className="text-sm text-gray-500">Per User*</p>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        {/* Same features as annual */}
+                        <p className="font-medium mb-4">Includes Everything in Essentials, Plus</p>
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Ring Groups</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call log reports</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Audio Conferencing</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Video Conferencing</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Video Meeting & Recording</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Access to Zendesk, Hubspot, Google and Microsoft 365 contacts + apps</span>
+                          </li>
+                        </ul>
+                        <Button className="w-full bg-gowith-orange hover:bg-gowith-orange-hover">
+                          <Link to="/contact" className="w-full">Get started</Link>
+                        </Button>
+                      </div>
+                    </div>
+                    
+                    {/* Enterprise Plan Monthly */}
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                      <div className="p-6 border-b">
+                        <h3 className="text-xl font-bold text-gowith-dark-blue mb-2">Enterprise</h3>
+                        <p className="text-gray-600 mb-4">A suite of complete and customized communications packages with powerful features for your business needs</p>
+                        <div className="mb-4">
+                          <p className="text-sm text-gray-500">Starting at</p>
+                          <p className="text-4xl font-bold text-gowith-dark-blue">$49.99</p>
+                          <p className="text-sm text-gray-500">Per User*</p>
+                        </div>
+                      </div>
+                      <div className="p-6">
+                        {/* Same features as annual */}
+                        <p className="font-medium mb-4">Includes Everything in Standard, Plus</p>
+                        <ul className="space-y-3 mb-6">
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call Center Dashboard</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Supervisor Panel</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Live Monitoring & Coaching</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call Center Queues</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Dynamic Caller ID-Automated</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-5 w-5 text-gowith-light-blue mr-2" />
+                            <span>Call Center Reporting</span>
+                          </li>
+                        </ul>
+                        <Button className="w-full bg-gowith-orange hover:bg-gowith-orange-hover">
+                          <Link to="/contact" className="w-full">Get started</Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+              </Tabs>
+              
+              {/* Add-on Section */}
+              <div className="bg-gray-50 rounded-lg p-6 mt-8">
+                <div className="flex flex-col md:flex-row items-center justify-between">
+                  <div>
+                    <span className="bg-gowith-orange text-white text-xs py-1 px-2 rounded mb-2 inline-block">Add-on</span>
+                    <h3 className="text-xl font-bold text-gowith-dark-blue">Logixx Guide</h3>
+                    <p className="text-gray-600">Self-service agent scripting, automated workflows, and analytics to optimize your call center.</p>
+                  </div>
+                  <div className="mt-4 md:mt-0">
+                    <Button className="bg-gowith-orange hover:bg-gowith-orange-hover">
+                      <Link to="/contact">Learn More</Link>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              
+              {/* FAQs */}
+              <div className="mt-12">
+                <h3 className="text-2xl font-bold text-gowith-dark-blue mb-6 text-center">FAQs</h3>
+                <div className="space-y-4">
+                  <div className="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">How can I benefit from Logixx Voice?</h4>
+                    <p className="text-gray-600">As an all-in-one virtual phone system, Logixx Voice can be used for customer support, as a contact center, or simply as a customer support tool. We also offer a solution that is suitable for companies operating remotely or with multiple locations at the same time.</p>
+                  </div>
+                  <div className="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">Does Logixx Voice offer free trials?</h4>
+                    <p className="text-gray-600">Contact our sales department to take advantage of our limited time offer for a seven-day free trial. Start dialing immediately and enjoy all our features and integrations for two weeks.</p>
+                  </div>
+                  <div className="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">How often can I change my billing plan?</h4>
+                    <p className="text-gray-600">Plans billed annually can only be upgraded to a higher tier plan (e.g. From Essential to Standard). It's not possible to downgrade on annual billing.</p>
+                  </div>
+                  <div className="bg-white border border-gray-200 rounded-lg p-6">
+                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">Does my Logixx Voice plan include unlimited calling?</h4>
+                    <p className="text-gray-600">With Logixx Voice, you can make unlimited VoIP calls and conference calls using the Logixx Voice app to anyone in your organization. Calls to the US and Canada are unlimited for external calls. Logixx Voice's international calling plans and bundles offer affordable rates when making international calls.</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Disclaimers */}
+              <div className="mt-12 text-xs text-gray-500">
+                <h4 className="font-medium mb-2">Information and Disclaimers</h4>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>New subscribers are only eligible for the free trial. There is a limit of five users and two desktop phones per trial. Hardware returned within 21 days of trial cancellation will not be charged. The use of SMS is not available as a trial.</li>
+                  <li>Acceptable Use policies apply to all plans.</li>
+                  <li>Enhanced Business SMS is subject to our SMS/MMS content policies, including volume and frequency limitations.</li>
+                  <li>Rental phones are only available with multi-year contracts.</li>
+                  <li>For two users and above, professional implementation is available.</li>
+                  <li>Additional taxes and fees may apply, including the Federal Universal Service Recovery Fee, the E911 Fee, the Compliance and Administrative Cost Recovery Fee, and the 911 Fee.</li>
+                  <li>We offer options to purchase additional numbers and toll-free minutes.</li>
+                  <li>All international calls will be charged at the rates listed in our table of international rates.</li>
+                  <li>There are no unlimited phone calls outside of the US or CA.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </section>
@@ -453,15 +818,13 @@ const BusinessComms = () => {
                 formDescription="Fill out the form below and one of our experts will contact you shortly."
                 buttonText="Submit Request" 
                 formType="demo"
-                formFooter={
-                  <p className="text-xs text-gray-500 mt-4">
-                    You consent to receive calls, SMS, and emails from us by clicking submit. 
-                    Reply STOP to unsubscribe or HELP for further assistance. Message frequency varies and Msg&Data rates may apply. 
-                    Reply "unsubscribe" to opt-out. Calls may be connected using automated technology. 
-                    We will not rent or sell personal information about you.
-                  </p>
-                }
               />
+              <p className="text-xs text-gray-500 mt-4 lg:col-span-2">
+                You consent to receive calls, SMS, and emails from us by clicking submit. 
+                Reply STOP to unsubscribe or HELP for further assistance. Message frequency varies and Msg&Data rates may apply. 
+                Reply "unsubscribe" to opt-out. Calls may be connected using automated technology. 
+                We will not rent or sell personal information about you.
+              </p>
             </div>
           </div>
         </section>
