@@ -15,7 +15,7 @@ const Certifications = () => {
     },
     {
       name: "CISSP",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Certified_Information_Systems_Security_Professional_logo.png/800px-Certified_Information_Systems_Security_Professional_logo.png"
+      logo: "/lovable-uploads/6acdc8cf-6fe6-4297-b70e-1d19a4ef31f0.png"
     },
     {
       name: "Google Cloud Partner",
@@ -23,7 +23,7 @@ const Certifications = () => {
     },
     {
       name: "Azure Solution Architect",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVYm6sPANAT9PN6p7utSix2XuGx97YLDwzUA&s"
+      logo: "/lovable-uploads/c98e8d7b-612c-4375-b9d1-af212401e6dc.png"
     }
   ];
 
