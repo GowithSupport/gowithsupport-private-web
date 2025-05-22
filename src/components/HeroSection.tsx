@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return (
     <section className="relative bg-gradient-to-b from-gowith-dark-blue to-gowith-medium-blue min-h-[80vh] flex items-center pt-24">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/f818970a-e819-4219-98ea-d966e36387e3.png')] bg-cover bg-center opacity-20"></div>
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/5a51eef8-c390-461b-a511-ef6ba3c5ee82.png')] bg-cover bg-center opacity-20"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
