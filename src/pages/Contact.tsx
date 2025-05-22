@@ -1,17 +1,14 @@
-
 import React from 'react';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-
 const Contact = () => {
-  return (
-    <>
+  return <>
       <Navbar />
       <main>
         <section className="pt-32 pb-20 bg-gradient-to-r from-gowith-dark-blue to-gowith-medium-blue">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl font-bold text-white mb-6 md:text-2xl">
                 Get in Touch
               </h1>
               <p className="text-xl text-gowith-light-blue mb-8">
@@ -31,59 +28,32 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">First Name*</label>
-                      <input 
-                        type="text" 
-                        id="firstName" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" 
-                        required 
-                      />
+                      <input type="text" id="firstName" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" required />
                     </div>
                     <div>
                       <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">Last Name*</label>
-                      <input 
-                        type="text" 
-                        id="lastName" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" 
-                        required 
-                      />
+                      <input type="text" id="lastName" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" required />
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">Company Name*</label>
-                    <input 
-                      type="text" 
-                      id="company" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" 
-                      required 
-                    />
+                    <input type="text" id="company" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" required />
                   </div>
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" 
-                      required 
-                    />
+                    <input type="email" id="email" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" required />
                   </div>
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                    <input 
-                      type="tel" 
-                      id="phone" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" 
-                    />
+                    <input type="tel" id="phone" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" />
                   </div>
                   
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interest</label>
-                    <select 
-                      id="service" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue"
-                    >
+                    <select id="service" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue">
                       <option value="">Select a service</option>
                       <option value="managed-it">Managed IT Services</option>
                       <option value="cybersecurity">Cybersecurity Services</option>
@@ -96,37 +66,22 @@ const Contact = () => {
                   
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                    <textarea 
-                      id="message" 
-                      rows={4} 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue"
-                    ></textarea>
+                    <textarea id="message" rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue"></textarea>
                   </div>
                   
                   <div>
                     <label htmlFor="source" className="block text-sm font-medium text-gray-700 mb-1">How did you hear about us?</label>
-                    <input 
-                      type="text" 
-                      id="source" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" 
-                    />
+                    <input type="text" id="source" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-gowith-medium-blue focus:border-gowith-medium-blue" />
                   </div>
                   
                   <div className="flex items-center">
-                    <input 
-                      type="checkbox" 
-                      id="newsletter" 
-                      className="h-4 w-4 text-gowith-medium-blue focus:ring-gowith-medium-blue border-gray-300 rounded" 
-                    />
+                    <input type="checkbox" id="newsletter" className="h-4 w-4 text-gowith-medium-blue focus:ring-gowith-medium-blue border-gray-300 rounded" />
                     <label htmlFor="newsletter" className="ml-2 block text-sm text-gray-700">
                       Subscribe to our newsletter
                     </label>
                   </div>
                   
-                  <button 
-                    type="submit" 
-                    className="w-full py-3 bg-gowith-orange hover:bg-gowith-orange-hover text-white rounded-md transition-colors"
-                  >
+                  <button type="submit" className="w-full py-3 bg-gowith-orange hover:bg-gowith-orange-hover text-white rounded-md transition-colors">
                     Submit
                   </button>
                 </form>
@@ -178,8 +133,6 @@ const Contact = () => {
         </section>
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Contact;
