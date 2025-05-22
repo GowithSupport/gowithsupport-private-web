@@ -1,28 +1,13 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Headset, Shield, Cloud, Briefcase, LineChart, MessageSquare, Scan, Code, Building, ShieldCheck, Stethoscope, Scale, Landmark, Factory, Laptop, Film, Building2, HeartHandshake } from 'lucide-react';
 import { Button } from './ui/button';
-import { 
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger
-} from "./ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "./ui/navigation-menu";
 import { cn } from "@/lib/utils";
-import { 
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger
-} from "./ui/dropdown-menu";
-
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -31,27 +16,16 @@ const Navbar = () => {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  return (
-    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gradient-to-r from-gray-900 to-gray-800 shadow-md py-2' 
-        : 'bg-transparent py-4'
-    }`}>
+  return <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gradient-to-r from-gray-900 to-gray-800 shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img 
-            src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" 
-            alt="GowithSupport Logo" 
-            className="h-28 w-auto" 
-          />
+          <img src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" alt="GowithSupport Logo" className="h-28 w-auto" />
         </Link>
 
         {/* Desktop Navigation with enhanced dropdown menus */}
@@ -251,28 +225,21 @@ const Navbar = () => {
 
         {/* CTA Button with updated phone number */}
         <div className="hidden md:block">
-          <Button 
-            className="bg-gowith-orange hover:bg-gowith-orange-hover text-white transition-colors"
-          >
+          <Button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white transition-colors">
             <a href="tel:9492885812" className="flex items-center">
-              <span className="mr-2">(949) 288-5812</span>
+              <span className="mr-2 text-lg text-right">Contact us</span>
             </a>
           </Button>
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
+        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-gowith-dark-blue shadow-md py-4 px-4 animate-fade-in">
+      {isOpen && <div className="md:hidden absolute top-full left-0 w-full bg-gowith-dark-blue shadow-md py-4 px-4 animate-fade-in">
           <div className="flex flex-col space-y-4">
             <Link to="/" className="text-white font-medium px-4 py-2 hover:bg-gowith-medium-blue rounded-md" onClick={() => setIsOpen(false)}>
               Home
@@ -361,19 +328,13 @@ const Navbar = () => {
               Contact
             </Link>
             
-            <Button 
-              className="bg-gowith-orange hover:bg-gowith-orange-hover text-white w-full"
-              onClick={() => setIsOpen(false)}
-            >
+            <Button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white w-full" onClick={() => setIsOpen(false)}>
               <a href="tel:9492885812" className="w-full flex items-center justify-center">
                 <span>(949) 288-5812</span>
               </a>
             </Button>
           </div>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 };
-
 export default Navbar;
