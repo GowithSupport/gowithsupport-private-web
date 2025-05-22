@@ -45,18 +45,18 @@ const Navbar = () => {
         : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        {/* Logo - increased size */}
+        {/* Logo - increased size slightly more */}
         <Link to="/" className="flex items-center">
           <img 
             src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" 
             alt="GowithSupport Logo" 
-            className="h-24 w-auto" // Increased from h-12 to h-24 (3x size)
+            className="h-28 w-auto" // Increased from h-24 to h-28 for slightly larger size
           />
         </Link>
 
-        {/* Desktop Navigation with dropdown menus */}
+        {/* Desktop Navigation with enhanced dropdown menus */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-white font-medium hover:text-gowith-light-blue transition-colors">
+          <Link to="/" className="text-white hover:text-gowith-light-blue transition-colors font-medium">
             Home
           </Link>
           
@@ -67,21 +67,21 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white">
-              <DropdownMenuItem>
-                <Link to="/services/managed-it" className="w-full">Managed IT Services</Link>
+            <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 py-2">
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/managed-it" className="w-full text-gray-800 hover:text-gowith-dark-blue">Managed IT Services</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/services/cybersecurity" className="w-full">Cybersecurity Services</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/cybersecurity" className="w-full text-gray-800 hover:text-gowith-dark-blue">Cybersecurity Services</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/services/cloud" className="w-full">Managed Cloud Services</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/cloud" className="w-full text-gray-800 hover:text-gowith-dark-blue">Managed Cloud Services</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/services/professional" className="w-full">Professional Services</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/professional" className="w-full text-gray-800 hover:text-gowith-dark-blue">Professional Services</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/services/it-strategy" className="w-full">IT Strategy</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/it-strategy" className="w-full text-gray-800 hover:text-gowith-dark-blue">IT Strategy</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -93,12 +93,12 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white">
-              <DropdownMenuItem>
-                <Link to="/insights/case-studies" className="w-full">Case Studies</Link>
+            <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 py-2">
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/insights/case-studies" className="w-full text-gray-800 hover:text-gowith-dark-blue">Case Studies</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/insights/blog" className="w-full">Blog</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/insights/blog" className="w-full text-gray-800 hover:text-gowith-dark-blue">Blog</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -110,47 +110,47 @@ const Navbar = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white">
-              <DropdownMenuItem>
-                <Link to="/industries/financial-services" className="w-full">Financial Services</Link>
+            <DropdownMenuContent className="bg-white shadow-lg rounded-md border border-gray-200 py-2">
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/financial-services" className="w-full text-gray-800 hover:text-gowith-dark-blue">Financial Services</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/healthcare" className="w-full">Healthcare</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/healthcare" className="w-full text-gray-800 hover:text-gowith-dark-blue">Healthcare</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/legal" className="w-full">Law Firms</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/legal" className="w-full text-gray-800 hover:text-gowith-dark-blue">Law Firms</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/private-equity" className="w-full">Private Equity</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/private-equity" className="w-full text-gray-800 hover:text-gowith-dark-blue">Private Equity</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/manufacturing" className="w-full">Manufacturing</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/manufacturing" className="w-full text-gray-800 hover:text-gowith-dark-blue">Manufacturing</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/technology" className="w-full">Technology & Startups</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/technology" className="w-full text-gray-800 hover:text-gowith-dark-blue">Technology & Startups</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/entertainment" className="w-full">Entertainment</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/entertainment" className="w-full text-gray-800 hover:text-gowith-dark-blue">Entertainment</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/professional-services" className="w-full">Professional Services</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/professional-services" className="w-full text-gray-800 hover:text-gowith-dark-blue">Professional Services</Link>
               </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Link to="/industries/non-profit" className="w-full">Non-Profits</Link>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/industries/non-profit" className="w-full text-gray-800 hover:text-gowith-dark-blue">Non-Profits</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <Link to="/about" className="text-white font-medium hover:text-gowith-light-blue transition-colors">
+          <Link to="/about" className="text-white hover:text-gowith-light-blue transition-colors font-medium">
             About Us
           </Link>
 
-          <Link to="/contact" className="text-white font-medium hover:text-gowith-light-blue transition-colors">
+          <Link to="/contact" className="text-white hover:text-gowith-light-blue transition-colors font-medium">
             Contact
           </Link>
         </nav>
 
-        {/* CTA Button */}
+        {/* CTA Button with updated phone number */}
         <div className="hidden md:block">
           <Button 
             className="bg-gowith-orange hover:bg-gowith-orange-hover text-white transition-colors"
