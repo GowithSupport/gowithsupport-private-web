@@ -9,7 +9,16 @@ import ProcessTimeline from "../../components/ProcessTimeline";
 import UseCaseSection from "../../components/UseCaseSection";
 import FinalCTA from "../../components/FinalCTA";
 import ContactForm from "../../components/ContactForm";
+import PhoneButton from "../../components/ui/phone-button";
 import { Headphones, MessageSquare, Video, Users, Mic } from 'lucide-react';
+import { Card, CardContent } from "../../components/ui/card";
+import { 
+  Carousel, 
+  CarouselContent, 
+  CarouselItem, 
+  CarouselNext, 
+  CarouselPrevious 
+} from "../../components/ui/carousel";
 
 const BusinessComms = () => {
   const features = [
@@ -163,6 +172,65 @@ const BusinessComms = () => {
           </div>
         </section>
         
+        {/* Platform UI Examples */}
+        <section className="py-16 bg-gowith-dark-blue">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Platform Interface</h2>
+              <p className="text-lg text-gowith-light-blue mb-8">
+                Experience our intuitive, feature-rich communication platform designed for modern businesses
+              </p>
+            </div>
+            
+            <div className="max-w-5xl mx-auto">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex items-center justify-center p-6">
+                          <div className="relative overflow-hidden rounded-lg shadow-xl">
+                            <img 
+                              src="/lovable-uploads/f45de574-9ec4-49ee-9707-2ad2e86354a9.png" 
+                              alt="Business Communications Platform - Chat Interface" 
+                              className="w-full object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                              <h3 className="font-bold text-lg">Unified Chat Interface</h3>
+                              <p>Seamlessly integrate messaging, calling, and video conferencing in one place</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex items-center justify-center p-6">
+                          <div className="relative overflow-hidden rounded-lg shadow-xl">
+                            <img 
+                              src="/lovable-uploads/c6cbc608-205d-440b-8086-0ea40a594cd9.png" 
+                              alt="Business Communications Platform - Dashboard" 
+                              className="w-full object-cover"
+                            />
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+                              <h3 className="font-bold text-lg">Admin Dashboard</h3>
+                              <p>Monitor performance, track analytics, and manage your communications ecosystem</p>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious className="lg:-left-16" />
+                <CarouselNext className="lg:-right-16" />
+              </Carousel>
+            </div>
+          </div>
+        </section>
+        
         {/* Key Features */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -213,6 +281,9 @@ const BusinessComms = () => {
                       <span>Clear next steps for getting started</span>
                     </li>
                   </ul>
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <PhoneButton phoneNumber="(949) 288-5812" className="flex-grow" />
                 </div>
               </div>
               

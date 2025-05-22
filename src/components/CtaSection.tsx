@@ -2,6 +2,7 @@
 import { Button } from './ui/button';
 import { Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import PhoneButton from './ui/phone-button';
 
 const CtaSection = () => {
   return <section className="py-20 bg-gowith-dark-blue">
@@ -19,10 +20,7 @@ const CtaSection = () => {
               <Link to="/contact">Schedule Your Free IT Consultation</Link>
             </Button>
             
-            <a href="tel:9492885812" className="flex items-center gap-2 text-white hover:text-gowith-light-blue transition-colors text-lg font-medium">
-              <Phone className="w-5 h-5" />
-              <span>(949) 288-5812</span>
-            </a>
+            <PhoneButton phoneNumber="(949) 288-5812" className="text-lg" />
           </div>
           
           <p className="text-white text-opacity-80 mt-8">
