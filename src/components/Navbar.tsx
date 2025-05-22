@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-gradient-to-r from-gowith-dark-blue to-gowith-medium-blue shadow-md py-2' 
+        ? 'bg-gradient-to-r from-gray-900 to-gray-800 shadow-md py-2' 
         : 'bg-transparent py-4'
     }`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
