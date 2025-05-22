@@ -8,7 +8,7 @@ import UseCaseSection from "../../components/UseCaseSection";
 import TechSpecsSection from "../../components/TechSpecsSection";
 import FinalCTA from "../../components/FinalCTA";
 import ContactForm from "../../components/ContactForm";
-import { Shield, Fingerprint } from 'lucide-react';
+import { Shield, Fingerprint, ScanFace } from 'lucide-react';
 const FaceIDAuth = () => {
   const platformFeatures = [{
     icon: <Shield className="h-6 w-6 text-white" />,
@@ -99,7 +99,11 @@ const FaceIDAuth = () => {
   return <>
       <Navbar />
       <main>
-        <ServiceHero title="Advanced Facial Authentication for Web & Mobile" subtitle="Secure, seamless user authentication using cutting-edge facial recognition technology" backgroundClass="from-gray-900 to-gowith-dark-blue" />
+        <ServiceHero 
+          title="Advanced Facial Authentication for Web & Mobile" 
+          subtitle="Secure, seamless user authentication using cutting-edge facial recognition technology" 
+          backgroundClass="from-gray-900 to-gowith-dark-blue" 
+        />
         
         {/* Overview Section */}
         <section className="py-16 bg-white">
@@ -123,15 +127,119 @@ const FaceIDAuth = () => {
           </div>
         </section>
         
-        {/* Platform Features */}
+        {/* Key Features Section - Updated with 3 columns */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gowith-dark-blue mb-4">Key Capabilities</h2>
+              <h2 className="text-3xl font-bold text-gowith-dark-blue mb-4">Key Features</h2>
               <p className="text-lg text-gray-600">Enterprise-grade facial recognition for modern applications</p>
             </div>
             
-            <FeatureGrid features={platformFeatures} />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Multi-Platform Support */}
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="h-12 w-12 rounded-full bg-gowith-medium-blue flex items-center justify-center mr-4">
+                    <Shield className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gowith-dark-blue">
+                    Multi-Platform Support
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Implement facial authentication across all your applications.
+                </p>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  <li>Web applications with JavaScript SDK integration</li>
+                  <li>Native iOS and Android mobile applications</li>
+                  <li>Cross-platform compatibility with unified API</li>
+                  <li>Responsive design for all device types</li>
+                  <li>Browser-based authentication without app downloads</li>
+                </ul>
+              </div>
+              
+              {/* Advanced Security Features */}
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="h-12 w-12 rounded-full bg-gowith-medium-blue flex items-center justify-center mr-4">
+                    <ScanFace className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gowith-dark-blue">
+                    Advanced Security Features
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Protect against sophisticated spoofing attacks.
+                </p>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  <li>Liveness detection to prevent photo and video spoofing</li>
+                  <li>Anti-deepfake technology for ultimate security</li>
+                  <li>Mask detection with enhanced recognition algorithms</li>
+                  <li>Real-time threat analysis and fraud prevention</li>
+                  <li>Encrypted biometric data storage and transmission</li>
+                </ul>
+              </div>
+              
+              {/* Developer-Friendly Integration */}
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <div className="flex items-center mb-4">
+                  <div className="h-12 w-12 rounded-full bg-gowith-medium-blue flex items-center justify-center mr-4">
+                    <Fingerprint className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gowith-dark-blue">
+                    Developer-Friendly Integration
+                  </h3>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Quick and easy implementation for developers.
+                </p>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  <li>RESTful API with comprehensive documentation</li>
+                  <li>JavaScript SDK for rapid web implementation</li>
+                  <li>Native mobile SDKs for iOS and Android</li>
+                  <li>Customizable UI components and workflows</li>
+                  <li>Real-time face detection and automatic capture</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Demo/Visual Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-gowith-dark-blue mb-6">AI-Powered Face Recognition</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  Our advanced AI algorithms deliver precise facial recognition with industry-leading accuracy rates and protection against spoofing attempts.
+                </p>
+                <div className="bg-gray-50 p-6 rounded-lg mb-6">
+                  <h3 className="text-xl font-bold text-gowith-dark-blue mb-4">Enterprise-Grade Protection</h3>
+                  <ul className="list-disc list-inside text-gray-600 space-y-1">
+                    <li>99.8% accuracy rate across all demographics</li>
+                    <li>Sub-second authentication response times</li>
+                    <li>GDPR and privacy regulation compliance</li>
+                    <li>On-premises deployment options available</li>
+                    <li>Comprehensive audit trails and analytics</li>
+                  </ul>
+                </div>
+                <div className="flex space-x-4">
+                  <button className="bg-gowith-medium-blue text-white px-6 py-2 rounded-md hover:bg-gowith-dark-blue transition-colors">
+                    Request Demo
+                  </button>
+                  <button className="border border-gowith-medium-blue text-gowith-medium-blue px-6 py-2 rounded-md hover:bg-gray-50 transition-colors">
+                    Learn More
+                  </button>
+                </div>
+              </div>
+              <div className="relative">
+                <img src="/lovable-uploads/b695c5c9-2951-42e6-b1fa-8aca4db367e3.png" alt="AI Facial Recognition" className="rounded-lg shadow-xl" />
+                <div className="absolute -bottom-5 -right-5 bg-white p-4 rounded-lg shadow-lg border-l-4 border-gowith-orange">
+                  <p className="text-gowith-dark-blue font-bold">Advanced liveness detection & anti-spoofing</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         
