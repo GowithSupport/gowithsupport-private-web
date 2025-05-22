@@ -1,5 +1,7 @@
+
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
+
 const HeroSection = () => {
   return <section className="relative bg-transparent min-h-[80vh] flex items-end justify-center">
       <div className="absolute inset-0 z-0">
@@ -21,7 +23,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-6 text-lg">
-              Schedule Your Free IT Consultation
+              <Link to="/contact">Schedule Your Free IT Consultation</Link>
             </Button>
             <Button variant="outline" className="border-white hover:bg-white hover:bg-opacity-20 px-8 py-6 text-lg text-sky-900">
               <Link to="/services">Explore Our Services</Link>
