@@ -1,88 +1,48 @@
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import CtaSection from "../components/CtaSection";
 import { Server, ShieldCheck, Cloud, Briefcase, LineChart } from "lucide-react";
-
 const Services = () => {
-  const services = [
-    {
-      icon: <Server className="w-6 h-6 text-white" />,
-      title: "Managed IT Services",
-      description: "Comprehensive support for your entire IT infrastructure",
-      link: "/services/managed-it",
-      features: [
-        "24/7 monitoring and support",
-        "Proactive maintenance and updates",
-        "Help desk and technical support",
-        "Network management and optimization",
-        "Hardware and software management"
-      ]
-    },
-    {
-      icon: <ShieldCheck className="w-6 h-6 text-white" />,
-      title: "Cybersecurity Services",
-      description: "Advanced protection against evolving threats",
-      link: "/services/cybersecurity",
-      features: [
-        "Security assessments and audits",
-        "Endpoint protection and detection",
-        "Email security and anti-phishing",
-        "Security awareness training",
-        "Incident response planning"
-      ]
-    },
-    {
-      icon: <Cloud className="w-6 h-6 text-white" />,
-      title: "Managed Cloud Services",
-      description: "Secure, scalable cloud infrastructure solutions",
-      link: "/services/cloud",
-      features: [
-        "Cloud migration and strategy",
-        "Infrastructure optimization",
-        "Backup and disaster recovery",
-        "Cloud security and compliance",
-        "Ongoing cloud management"
-      ]
-    },
-    {
-      icon: <Briefcase className="w-6 h-6 text-white" />,
-      title: "Professional Services",
-      description: "Expert guidance for strategic IT initiatives",
-      link: "/services/professional",
-      features: [
-        "IT project management",
-        "Technology implementation",
-        "Systems integration",
-        "Software development",
-        "Business process automation"
-      ]
-    },
-    {
-      icon: <LineChart className="w-6 h-6 text-white" />,
-      title: "IT Strategy",
-      description: "Aligning technology with business goals",
-      link: "/services/it-strategy",
-      features: [
-        "Technology roadmapping",
-        "IT budget planning",
-        "Digital transformation",
-        "IT governance",
-        "Strategic technology consultation"
-      ]
-    }
-  ];
-
-  return (
-    <>
+  const services = [{
+    icon: <Server className="w-6 h-6 text-white" />,
+    title: "Managed IT Services",
+    description: "Comprehensive support for your entire IT infrastructure",
+    link: "/services/managed-it",
+    features: ["24/7 monitoring and support", "Proactive maintenance and updates", "Help desk and technical support", "Network management and optimization", "Hardware and software management"]
+  }, {
+    icon: <ShieldCheck className="w-6 h-6 text-white" />,
+    title: "Cybersecurity Services",
+    description: "Advanced protection against evolving threats",
+    link: "/services/cybersecurity",
+    features: ["Security assessments and audits", "Endpoint protection and detection", "Email security and anti-phishing", "Security awareness training", "Incident response planning"]
+  }, {
+    icon: <Cloud className="w-6 h-6 text-white" />,
+    title: "Managed Cloud Services",
+    description: "Secure, scalable cloud infrastructure solutions",
+    link: "/services/cloud",
+    features: ["Cloud migration and strategy", "Infrastructure optimization", "Backup and disaster recovery", "Cloud security and compliance", "Ongoing cloud management"]
+  }, {
+    icon: <Briefcase className="w-6 h-6 text-white" />,
+    title: "Professional Services",
+    description: "Expert guidance for strategic IT initiatives",
+    link: "/services/professional",
+    features: ["IT project management", "Technology implementation", "Systems integration", "Software development", "Business process automation"]
+  }, {
+    icon: <LineChart className="w-6 h-6 text-white" />,
+    title: "IT Strategy",
+    description: "Aligning technology with business goals",
+    link: "/services/it-strategy",
+    features: ["Technology roadmapping", "IT budget planning", "Digital transformation", "IT governance", "Strategic technology consultation"]
+  }];
+  return <>
       <Navbar />
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-r from-gowith-dark-blue to-gowith-medium-blue">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h1 className="text-4xl font-bold text-white mb-6 md:text-2xl">
                 Comprehensive IT Services for Growing Businesses
               </h1>
               <p className="text-xl text-gowith-light-blue mb-8">
@@ -105,16 +65,7 @@ const Services = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <ServiceCard
-                  key={index}
-                  icon={service.icon}
-                  title={service.title}
-                  description={service.description}
-                  link={service.link}
-                  features={service.features}
-                />
-              ))}
+              {services.map((service, index) => <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} link={service.link} features={service.features} />)}
             </div>
           </div>
         </section>
@@ -192,11 +143,7 @@ const Services = () => {
 
               <div className="relative">
                 <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
-                  <img 
-                    src="https://images.unsplash.com/photo-1531973819741-e27a5ae2cc7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
-                    alt="IT professionals in a meeting"
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="https://images.unsplash.com/photo-1531973819741-e27a5ae2cc7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="IT professionals in a meeting" className="w-full h-full object-cover" />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-gowith-orange p-6 rounded-lg shadow-lg max-w-xs">
                   <p className="text-white font-bold text-xl">
@@ -266,8 +213,6 @@ const Services = () => {
         <CtaSection />
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Services;
