@@ -10,16 +10,12 @@ const Certifications = () => {
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png"
     },
     {
-      name: "CompTIA Security+",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/CompTIA_logo.svg/1280px-CompTIA_logo.svg.png"
-    },
-    {
       name: "AWS Solution Architect",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png"
     },
     {
       name: "CISSP",
-      logo: "https://www.isc2.org/-/media/ISC2/Certifications/Cert-Badges/CISSP-Badge.ashx"
+      logo: "https://www.isc2.org/-/media/ISC2/Certification/Certification-Badges/CISSP-Associates.ashx"
     },
     {
       name: "Google Cloud Partner",
@@ -27,7 +23,7 @@ const Certifications = () => {
     },
     {
       name: "Azure Solution Architect",
-      logo: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg"
+      logo: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-azure-solutions-architect-expert.svg"
     }
   ];
 
@@ -43,7 +39,7 @@ const Certifications = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {certifications.map((cert, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
               <img 
