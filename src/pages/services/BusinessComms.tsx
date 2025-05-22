@@ -106,7 +106,7 @@ const BusinessComms = () => {
               <p className="text-xl text-gowith-light-blue mb-6">
                 Streamline your team collaboration and customer communications with an all-in-one solution
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold mt-12 mb-4">Work from Anywhere</h2>
+              
               
               
             </div>
