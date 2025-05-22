@@ -1,20 +1,12 @@
-
 import { Button } from './ui/button';
 import { Link } from 'react-router-dom';
-
 const HeroSection = () => {
-  return (
-    <section className="relative bg-transparent min-h-[80vh] flex items-end justify-center">
+  return <section className="relative bg-transparent min-h-[80vh] flex items-end justify-center">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/lovable-uploads/330e0225-2310-4395-bbb5-72dddb56a591.png" 
-          alt="IT Business Meeting" 
-          className="w-full h-full object-cover" 
-          style={{ 
-            filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))', 
-            backgroundColor: 'transparent'
-          }}
-        />
+        <img src="/lovable-uploads/330e0225-2310-4395-bbb5-72dddb56a591.png" alt="IT Business Meeting" className="w-full h-full object-cover" style={{
+        filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))',
+        backgroundColor: 'transparent'
+      }} />
       </div>
       <div className="container mx-auto px-4 relative z-10 pb-16">
         <div className="max-w-4xl mx-auto bg-transparent backdrop-blur-sm p-8 rounded-lg text-center">
@@ -31,14 +23,12 @@ const HeroSection = () => {
             <Button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-6 text-lg">
               Schedule Your Free IT Consultation
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:bg-opacity-20 px-8 py-6 text-lg">
+            <Button variant="outline" className="border-white hover:bg-white hover:bg-opacity-20 px-8 py-6 text-lg text-sky-900">
               <Link to="/services">Explore Our Services</Link>
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
