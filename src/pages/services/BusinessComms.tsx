@@ -14,7 +14,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
 import { Button } from "../../components/ui/button";
 import { Link } from 'react-router-dom';
-
 const BusinessComms = () => {
   const features = [{
     icon: <Headphones className="h-6 w-6 text-white" />,
@@ -103,17 +102,13 @@ const BusinessComms = () => {
         <section className="py-16 bg-gradient-to-b from-gowith-dark-blue to-blue-900 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-8">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Unified Business Communications Platform</h1>
+              <h1 className="text-4xl font-bold mb-4 md:text-2xl mx-0 my-[50px]">Unified Business Communications Platform</h1>
               <p className="text-xl text-gowith-light-blue mb-6">
                 Streamline your team collaboration and customer communications with an all-in-one solution
               </p>
               <h2 className="text-3xl md:text-4xl font-bold mt-12 mb-4">Work from Anywhere</h2>
-              <p className="text-xl text-gowith-light-blue mb-6">
-                The telephone system for the modern workplace
-              </p>
-              <Button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-3 text-lg rounded-md mt-4">
-                <Link to="/contact">Try now</Link>
-              </Button>
+              
+              
             </div>
             <div className="max-w-4xl mx-auto text-center mt-12">
               <h3 className="text-2xl font-bold mb-4">All the features of a world-class cloud phone system in one app</h3>
@@ -749,5 +744,4 @@ GowithSuppor
       <Footer />
     </>;
 };
-
 export default BusinessComms;
