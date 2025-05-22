@@ -28,9 +28,9 @@ const HeroSection = () => {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <img 
-              src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" 
-              alt="GowithSupport Logo" 
-              className="w-auto h-60 md:h-80 brightness-125" 
+              src="/lovable-uploads/330e0225-2310-4395-bbb5-72dddb56a591.png" 
+              alt="IT Business Meeting" 
+              className="w-auto h-auto max-h-96 rounded-lg shadow-lg" 
             />
           </div>
         </div>
