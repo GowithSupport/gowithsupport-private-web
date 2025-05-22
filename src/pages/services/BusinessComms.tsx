@@ -11,156 +11,95 @@ import ContactForm from "../../components/ContactForm";
 import PhoneButton from "../../components/ui/phone-button";
 import { Headphones, MessageSquare, Video, Users, Mic, Phone, Check } from 'lucide-react';
 import { Card, CardContent } from "../../components/ui/card";
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious 
-} from "../../components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../components/ui/carousel";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "../../components/ui/tabs";
 import { Button } from "../../components/ui/button";
 import { Link } from 'react-router-dom';
-
 const BusinessComms = () => {
-  const features = [
-    {
-      icon: <Headphones className="h-6 w-6 text-white" />,
-      title: "Unified Communications",
-      description: "Integrate all your communication channels into one seamless platform.",
-      items: [
-        "Voice calling with enterprise-grade VoIP functionality",
-        "Text messaging (SMS/MMS) from business phone numbers",
-        "Video conferencing and screen sharing capabilities",
-        "Team messaging and collaboration tools",
-        "All accessible from desktop, mobile, or web platforms"
-      ]
-    },
-    {
-      icon: <Mic className="h-6 w-6 text-white" />,
-      title: "Advanced Call Center Features",
-      description: "Enhance customer service with professional call management tools.",
-      items: [
-        "Intelligent call routing and distribution",
-        "Real-time coaching and agent scripting",
-        "Dynamic caller ID based on customer location",
-        "Call recording and analytics for quality improvement",
-        "Interactive voice response (IVR) systems"
-      ]
-    },
-    {
-      icon: <Users className="h-6 w-6 text-white" />,
-      title: "Customer Relationship Management",
-      description: "Track and manage customer interactions across all channels.",
-      items: [
-        "Integrated CRM with communication history",
-        "Lead management and distribution capabilities",
-        "Automated workflows for customer follow-up",
-        "Performance analytics and reporting",
-        "Customer interaction tracking across all channels"
-      ]
-    },
-    {
-      icon: <MessageSquare className="h-6 w-6 text-white" />,
-      title: "Business Productivity Tools",
-      description: "Streamline operations with integrated business tools.",
-      items: [
-        "Document sharing and collaboration features",
-        "Calendar integration and appointment scheduling",
-        "Contact management and directory services",
-        "Mobile apps for on-the-go communication",
-        "Third-party software integrations"
-      ]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Users className="h-6 w-6" />,
-      title: "Enhanced Productivity",
-      description: "Reduce time spent switching between communication tools and improve team collaboration with a unified platform that connects all your business communications."
-    },
-    {
-      icon: <Headphones className="h-6 w-6" />,
-      title: "Improved Customer Experience",
-      description: "Deliver consistent, professional communication across all channels while maintaining complete visibility into customer interactions and history."
-    },
-    {
-      icon: <MessageSquare className="h-6 w-6" />,
-      title: "Cost Optimization",
-      description: "Eliminate multiple vendor relationships and reduce communication costs while gaining access to enterprise-grade features typically available only to large corporations."
-    },
-    {
-      icon: <Video className="h-6 w-6" />,
-      title: "Scalability",
-      description: "Easily add users, features, and capabilities as your business grows, with flexible pricing that scales with your needs."
-    },
-    {
-      icon: <Mic className="h-6 w-6" />,
-      title: "Security and Reliability",
-      description: "Enterprise-grade security features, 99.9% uptime guarantee, and compliance with industry regulations ensure your communications are always secure and available."
-    }
-  ];
-
-  const processSteps = [
-    {
-      number: 1,
-      title: "Assessment",
-      description: "We evaluate your current communication tools and requirements to understand your unique business needs."
-    },
-    {
-      number: 2,
-      title: "Design",
-      description: "Our team creates a customized solution that meets your specific needs and business goals."
-    },
-    {
-      number: 3,
-      title: "Migration",
-      description: "We seamlessly transition from your existing systems with minimal disruption to your business operations."
-    },
-    {
-      number: 4,
-      title: "Training",
-      description: "Comprehensive training for all users ensures quick adoption of new features and capabilities."
-    },
-    {
-      number: 5,
-      title: "Optimization",
-      description: "Ongoing monitoring and optimization maximize the value of your communication platform."
-    }
-  ];
-
-  const useCases = [
-    {
-      icon: <Headphones className="h-6 w-6 text-white" />,
-      title: "Call Centers",
-      description: "Optimize customer service operations with advanced call management and routing."
-    },
-    {
-      icon: <Users className="h-6 w-6 text-white" />,
-      title: "Sales Teams",
-      description: "Enhance lead management and follow-up with integrated communication tools."
-    },
-    {
-      icon: <Video className="h-6 w-6 text-white" />,
-      title: "Remote Teams",
-      description: "Connect distributed teams with powerful collaboration and video conferencing."
-    },
-    {
-      icon: <MessageSquare className="h-6 w-6 text-white" />,
-      title: "Professional Services",
-      description: "Manage client communications efficiently with integrated messaging and tracking."
-    }
-  ];
-
-  return (
-    <>
+  const features = [{
+    icon: <Headphones className="h-6 w-6 text-white" />,
+    title: "Unified Communications",
+    description: "Integrate all your communication channels into one seamless platform.",
+    items: ["Voice calling with enterprise-grade VoIP functionality", "Text messaging (SMS/MMS) from business phone numbers", "Video conferencing and screen sharing capabilities", "Team messaging and collaboration tools", "All accessible from desktop, mobile, or web platforms"]
+  }, {
+    icon: <Mic className="h-6 w-6 text-white" />,
+    title: "Advanced Call Center Features",
+    description: "Enhance customer service with professional call management tools.",
+    items: ["Intelligent call routing and distribution", "Real-time coaching and agent scripting", "Dynamic caller ID based on customer location", "Call recording and analytics for quality improvement", "Interactive voice response (IVR) systems"]
+  }, {
+    icon: <Users className="h-6 w-6 text-white" />,
+    title: "Customer Relationship Management",
+    description: "Track and manage customer interactions across all channels.",
+    items: ["Integrated CRM with communication history", "Lead management and distribution capabilities", "Automated workflows for customer follow-up", "Performance analytics and reporting", "Customer interaction tracking across all channels"]
+  }, {
+    icon: <MessageSquare className="h-6 w-6 text-white" />,
+    title: "Business Productivity Tools",
+    description: "Streamline operations with integrated business tools.",
+    items: ["Document sharing and collaboration features", "Calendar integration and appointment scheduling", "Contact management and directory services", "Mobile apps for on-the-go communication", "Third-party software integrations"]
+  }];
+  const benefits = [{
+    icon: <Users className="h-6 w-6" />,
+    title: "Enhanced Productivity",
+    description: "Reduce time spent switching between communication tools and improve team collaboration with a unified platform that connects all your business communications."
+  }, {
+    icon: <Headphones className="h-6 w-6" />,
+    title: "Improved Customer Experience",
+    description: "Deliver consistent, professional communication across all channels while maintaining complete visibility into customer interactions and history."
+  }, {
+    icon: <MessageSquare className="h-6 w-6" />,
+    title: "Cost Optimization",
+    description: "Eliminate multiple vendor relationships and reduce communication costs while gaining access to enterprise-grade features typically available only to large corporations."
+  }, {
+    icon: <Video className="h-6 w-6" />,
+    title: "Scalability",
+    description: "Easily add users, features, and capabilities as your business grows, with flexible pricing that scales with your needs."
+  }, {
+    icon: <Mic className="h-6 w-6" />,
+    title: "Security and Reliability",
+    description: "Enterprise-grade security features, 99.9% uptime guarantee, and compliance with industry regulations ensure your communications are always secure and available."
+  }];
+  const processSteps = [{
+    number: 1,
+    title: "Assessment",
+    description: "We evaluate your current communication tools and requirements to understand your unique business needs."
+  }, {
+    number: 2,
+    title: "Design",
+    description: "Our team creates a customized solution that meets your specific needs and business goals."
+  }, {
+    number: 3,
+    title: "Migration",
+    description: "We seamlessly transition from your existing systems with minimal disruption to your business operations."
+  }, {
+    number: 4,
+    title: "Training",
+    description: "Comprehensive training for all users ensures quick adoption of new features and capabilities."
+  }, {
+    number: 5,
+    title: "Optimization",
+    description: "Ongoing monitoring and optimization maximize the value of your communication platform."
+  }];
+  const useCases = [{
+    icon: <Headphones className="h-6 w-6 text-white" />,
+    title: "Call Centers",
+    description: "Optimize customer service operations with advanced call management and routing."
+  }, {
+    icon: <Users className="h-6 w-6 text-white" />,
+    title: "Sales Teams",
+    description: "Enhance lead management and follow-up with integrated communication tools."
+  }, {
+    icon: <Video className="h-6 w-6 text-white" />,
+    title: "Remote Teams",
+    description: "Connect distributed teams with powerful collaboration and video conferencing."
+  }, {
+    icon: <MessageSquare className="h-6 w-6 text-white" />,
+    title: "Professional Services",
+    description: "Manage client communications efficiently with integrated messaging and tracking."
+  }];
+  return <>
       <Navbar />
       <main>
-        <ServiceHero 
-          title="Unified Business Communications Platform" 
-          subtitle="Streamline your team collaboration and customer communications with an all-in-one solution" 
-        />
+        <ServiceHero title="Unified Business Communications Platform" subtitle="Streamline your team collaboration and customer communications with an all-in-one solution" />
         
         {/* Work from Anywhere Section */}
         <section className="py-16 bg-gowith-dark-blue text-white">
@@ -170,9 +109,7 @@ const BusinessComms = () => {
               <p className="text-xl text-gowith-light-blue mb-6">
                 The telephone system for the modern workplace
               </p>
-              <button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-3 rounded-md transition-colors text-lg font-medium">
-                Try Now
-              </button>
+              
             </div>
             <div className="max-w-4xl mx-auto text-center mt-12">
               <h3 className="text-2xl font-bold mb-4">All the features of a world-class cloud phone system in one app</h3>
@@ -188,8 +125,8 @@ const BusinessComms = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gowith-dark-blue mb-4">PLANS THAT WORK FOR YOUR BUSINESS-AND YOUR WALLET</h2>
-              <p className="text-xl text-gray-600 mb-8">LOGIXX VOICE FEATURES & PRICING MODEL</p>
-              <p className="text-lg text-gray-600">Everything you need to get started today</p>
+              <p className="text-gray-600 mb-8 text-lg">VOICE FEATURES & PRICING MODEL</p>
+              
             </div>
             
             <div className="max-w-5xl mx-auto">
@@ -493,7 +430,7 @@ const BusinessComms = () => {
                 <div className="flex flex-col md:flex-row items-center justify-between">
                   <div>
                     <span className="bg-gowith-orange text-white text-xs py-1 px-2 rounded mb-2 inline-block">Add-on</span>
-                    <h3 className="text-xl font-bold text-gowith-dark-blue">Logixx Guide</h3>
+                    <h3 className="text-xl font-bold text-gowith-dark-blue">GowithSuppor Guide</h3>
                     <p className="text-gray-600">Self-service agent scripting, automated workflows, and analytics to optimize your call center.</p>
                   </div>
                   <div className="mt-4 md:mt-0">
@@ -509,11 +446,13 @@ const BusinessComms = () => {
                 <h3 className="text-2xl font-bold text-gowith-dark-blue mb-6 text-center">FAQs</h3>
                 <div className="space-y-4">
                   <div className="bg-white border border-gray-200 rounded-lg p-6">
-                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">How can I benefit from Logixx Voice?</h4>
-                    <p className="text-gray-600">As an all-in-one virtual phone system, Logixx Voice can be used for customer support, as a contact center, or simply as a customer support tool. We also offer a solution that is suitable for companies operating remotely or with multiple locations at the same time.</p>
+                    
+                    <p className="text-gray-600">As an all-in-one virtual phone system, 
+GowithSuppor
+ Voice can be used for customer support, as a contact center, or simply as a customer support tool. We also offer a solution that is suitable for companies operating remotely or with multiple locations at the same time.</p>
                   </div>
                   <div className="bg-white border border-gray-200 rounded-lg p-6">
-                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">Does Logixx Voice offer free trials?</h4>
+                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">Does GowithSupport Voice offer free trials?</h4>
                     <p className="text-gray-600">Contact our sales department to take advantage of our limited time offer for a seven-day free trial. Start dialing immediately and enjoy all our features and integrations for two weeks.</p>
                   </div>
                   <div className="bg-white border border-gray-200 rounded-lg p-6">
@@ -521,8 +460,8 @@ const BusinessComms = () => {
                     <p className="text-gray-600">Plans billed annually can only be upgraded to a higher tier plan (e.g. From Essential to Standard). It's not possible to downgrade on annual billing.</p>
                   </div>
                   <div className="bg-white border border-gray-200 rounded-lg p-6">
-                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">Does my Logixx Voice plan include unlimited calling?</h4>
-                    <p className="text-gray-600">With Logixx Voice, you can make unlimited VoIP calls and conference calls using the Logixx Voice app to anyone in your organization. Calls to the US and Canada are unlimited for external calls. Logixx Voice's international calling plans and bundles offer affordable rates when making international calls.</p>
+                    <h4 className="text-lg font-medium text-gowith-dark-blue mb-2">Does my GowithSupport Voice plan include unlimited calling?</h4>
+                    <p className="text-gray-600">With Voice, you can make unlimited VoIP calls and conference calls using the Voice app to anyone in your organization. Calls to the US and Canada are unlimited for external calls. Voice's international calling plans and bundles offer affordable rates when making international calls.</p>
                   </div>
                 </div>
               </div>
@@ -576,11 +515,7 @@ const BusinessComms = () => {
                       <Card>
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
-                            <img 
-                              src="/lovable-uploads/ae064278-371c-4c0b-a8d5-5c1e57a9c7d1.png" 
-                              alt="An Advanced Phone System That Meets Today's Business Needs" 
-                              className="w-full object-cover"
-                            />
+                            <img src="/lovable-uploads/ae064278-371c-4c0b-a8d5-5c1e57a9c7d1.png" alt="An Advanced Phone System That Meets Today's Business Needs" className="w-full object-cover" />
                           </div>
                         </CardContent>
                       </Card>
@@ -591,11 +526,7 @@ const BusinessComms = () => {
                       <Card>
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
-                            <img 
-                              src="/lovable-uploads/73a7901d-ffe4-433c-ba2e-86355fbf9f00.png" 
-                              alt="Empower Your Team" 
-                              className="w-full object-cover"
-                            />
+                            <img src="/lovable-uploads/73a7901d-ffe4-433c-ba2e-86355fbf9f00.png" alt="Empower Your Team" className="w-full object-cover" />
                           </div>
                         </CardContent>
                       </Card>
@@ -606,11 +537,7 @@ const BusinessComms = () => {
                       <Card>
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
-                            <img 
-                              src="/lovable-uploads/d14591a0-5690-4ddf-99ca-b2144172f86c.png" 
-                              alt="Easy-To-Use And Effective Business Texting" 
-                              className="w-full object-cover"
-                            />
+                            <img src="/lovable-uploads/d14591a0-5690-4ddf-99ca-b2144172f86c.png" alt="Easy-To-Use And Effective Business Texting" className="w-full object-cover" />
                           </div>
                         </CardContent>
                       </Card>
@@ -621,11 +548,7 @@ const BusinessComms = () => {
                       <Card>
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
-                            <img 
-                              src="/lovable-uploads/cdbfa0fa-7893-4974-9cc1-a27e1e325c14.png" 
-                              alt="Reimagine The Way You Meet" 
-                              className="w-full object-cover"
-                            />
+                            <img src="/lovable-uploads/cdbfa0fa-7893-4974-9cc1-a27e1e325c14.png" alt="Reimagine The Way You Meet" className="w-full object-cover" />
                           </div>
                         </CardContent>
                       </Card>
@@ -636,11 +559,7 @@ const BusinessComms = () => {
                       <Card>
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
-                            <img 
-                              src="/lovable-uploads/33683319-9c3a-4e4c-aabb-6ebb320ff02e.png" 
-                              alt="Effective And Simple Team Collaboration" 
-                              className="w-full object-cover"
-                            />
+                            <img src="/lovable-uploads/33683319-9c3a-4e4c-aabb-6ebb320ff02e.png" alt="Effective And Simple Team Collaboration" className="w-full object-cover" />
                           </div>
                         </CardContent>
                       </Card>
@@ -651,11 +570,7 @@ const BusinessComms = () => {
                       <Card>
                         <CardContent className="flex items-center justify-center p-6">
                           <div className="relative overflow-hidden rounded-lg shadow-xl">
-                            <img 
-                              src="/lovable-uploads/4e5602a4-78e4-489f-a23f-17fbb354874a.png" 
-                              alt="Call Center Platform" 
-                              className="w-full object-cover"
-                            />
+                            <img src="/lovable-uploads/4e5602a4-78e4-489f-a23f-17fbb354874a.png" alt="Call Center Platform" className="w-full object-cover" />
                           </div>
                         </CardContent>
                       </Card>
@@ -724,7 +639,7 @@ const BusinessComms = () => {
               <p className="text-lg text-gray-600 mb-10">Connect the tools and services that you use every day to automate work for users.</p>
               
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-                <img src="/lovable-uploads/78f1c851-2693-4f7f-8aa1-69d476dab217.png" alt="Supported integrations" className="w-full" />
+                
               </div>
             </div>
           </div>
@@ -813,12 +728,7 @@ const BusinessComms = () => {
                 </div>
               </div>
               
-              <ContactForm 
-                formTitle="Request a Demo" 
-                formDescription="Fill out the form below and one of our experts will contact you shortly."
-                buttonText="Submit Request" 
-                formType="demo"
-              />
+              <ContactForm formTitle="Request a Demo" formDescription="Fill out the form below and one of our experts will contact you shortly." buttonText="Submit Request" formType="demo" />
               <p className="text-xs text-gray-500 mt-4 lg:col-span-2">
                 You consent to receive calls, SMS, and emails from us by clicking submit. 
                 Reply STOP to unsubscribe or HELP for further assistance. Message frequency varies and Msg&Data rates may apply. 
@@ -830,15 +740,9 @@ const BusinessComms = () => {
         </section>
         
         {/* Final CTA */}
-        <FinalCTA 
-          headline="Transform Your Business Communications Today" 
-          buttonText="Schedule a Platform Demo" 
-          buttonLink="/contact"
-        />
+        <FinalCTA headline="Transform Your Business Communications Today" buttonText="Schedule a Platform Demo" buttonLink="/contact" />
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default BusinessComms;
