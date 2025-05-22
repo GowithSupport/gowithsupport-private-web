@@ -26,11 +26,11 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 flex justify-center items-center">
             <img 
               src="/lovable-uploads/330e0225-2310-4395-bbb5-72dddb56a591.png" 
               alt="IT Business Meeting" 
-              className="w-auto h-auto max-h-96 rounded-lg shadow-lg" 
+              className="w-full h-auto object-cover rounded-lg shadow-lg" 
             />
           </div>
         </div>
