@@ -50,7 +50,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" 
             alt="GowithSupport Logo" 
-            className="h-28 w-auto" // Increased from h-24 to h-28 for slightly larger size
+            className="h-28 w-auto" 
           />
         </Link>
 
@@ -155,8 +155,8 @@ const Navbar = () => {
           <Button 
             className="bg-gowith-orange hover:bg-gowith-orange-hover text-white transition-colors"
           >
-            <a href="tel:9492885312" className="flex items-center">
-              <span className="mr-2">(949) 288-5312</span>
+            <a href="tel:9492885812" className="flex items-center">
+              <span className="mr-2">(949) 288-5812</span>
             </a>
           </Button>
         </div>
@@ -257,8 +257,8 @@ const Navbar = () => {
               className="bg-gowith-orange hover:bg-gowith-orange-hover text-white w-full"
               onClick={() => setIsOpen(false)}
             >
-              <a href="tel:9492885312" className="w-full flex items-center justify-center">
-                <span>(949) 288-5312</span>
+              <a href="tel:9492885812" className="w-full flex items-center justify-center">
+                <span>(949) 288-5812</span>
               </a>
             </Button>
           </div>

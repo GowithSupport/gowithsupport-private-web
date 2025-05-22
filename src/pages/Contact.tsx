@@ -138,14 +138,8 @@ const Contact = () => {
                 
                 <div className="space-y-8">
                   <div>
-                    <h3 className="text-xl font-bold text-gowith-medium-blue mb-2">Main Office</h3>
-                    <p className="text-gray-600">27632 Falkirk</p>
-                    <p className="text-gray-600">Mission Viejo, CA 92691</p>
-                  </div>
-                  
-                  <div>
                     <h3 className="text-xl font-bold text-gowith-medium-blue mb-2">Phone</h3>
-                    <p className="text-gray-600">Main: <a href="tel:9492885312" className="text-gowith-medium-blue hover:underline">(949) 288-5312</a></p>
+                    <p className="text-gray-600">Main: <a href="tel:9492885812" className="text-gowith-medium-blue hover:underline">(949) 288-5812</a></p>
                   </div>
                   
                   <div>

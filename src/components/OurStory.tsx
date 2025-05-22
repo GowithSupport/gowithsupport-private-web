@@ -29,6 +29,13 @@ const OurStory = () => {
             <p className="text-lg text-gray-700">
               We specialize in all technologies that support business growth and innovation. From cybersecurity to cloud services, from IT strategy to managed services, our team brings expertise and dedication to every client relationship.
             </p>
+            <div className="mt-8">
+              <img 
+                src="/lovable-uploads/7a7134b5-b2bf-4282-8463-5b9e5f90695a.png" 
+                alt="Our Store" 
+                className="rounded-lg shadow-md max-w-full h-auto"
+              />
+            </div>
           </div>
         </div>
       </div>

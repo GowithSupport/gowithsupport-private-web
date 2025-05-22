@@ -19,11 +19,15 @@ const Certifications = () => {
     },
     {
       name: "CISSP",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/ISC2_logo.svg/2560px-ISC2_logo.svg.png"
+      logo: "https://www.isc2.org/-/media/ISC2/Certifications/Cert-Badges/CISSP-Badge.ashx"
     },
     {
       name: "Google Cloud Partner",
       logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png"
+    },
+    {
+      name: "Azure Solution Architect",
+      logo: "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg"
     }
   ];
 
@@ -39,7 +43,7 @@ const Certifications = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8">
           {certifications.map((cert, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center justify-center h-32">
               <img 

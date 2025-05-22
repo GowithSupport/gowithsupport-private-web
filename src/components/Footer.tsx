@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -11,14 +12,14 @@ const Footer = () => {
               <img 
                 src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" 
                 alt="GowithSupport Logo" 
-                className="h-20 w-auto brightness-150"
+                className="h-28 w-auto brightness-150"
               />
             </Link>
             <p className="text-gray-300 mb-4">
               Enterprise-level technology and security solutions tailored for growing businesses.
             </p>
             <div className="text-gray-300">
-              <p className="mb-1"><strong>Phone:</strong> <a href="tel:9492885312" className="hover:text-white">(949) 288-5312</a></p>
+              <p className="mb-1"><strong>Phone:</strong> <a href="tel:9492885812" className="hover:text-white">(949) 288-5812</a></p>
               <p><strong>Email:</strong> <a href="mailto:info@gowithsupport.com" className="hover:text-white">info@gowithsupport.com</a></p>
             </div>
             <div className="flex space-x-4 mt-6">

@@ -70,7 +70,7 @@ const IndustryDetail = ({ industry }) => {
         {/* CTA Button */}
         <div className="text-center mt-8">
           <h3 className="text-2xl font-bold text-gowith-dark-blue mb-4">{industry.ctaHeadline}</h3>
-          <Button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white text-lg px-8 py-6 h-auto">
+          <Button className="bg-gowith-orange hover:bg-gowith-orange-hover text-white px-8 py-2 h-auto w-64">
             {industry.ctaButtonText}
           </Button>
         </div>
