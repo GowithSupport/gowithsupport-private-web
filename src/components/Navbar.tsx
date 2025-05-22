@@ -136,7 +136,7 @@ const Navbar = () => {
                 <Link to="/industries/professional-services" className="w-full text-gray-800 hover:text-gowith-dark-blue">Professional Services</Link>
               </DropdownMenuItem>
               <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
-                <Link to="/industries/non-profit" className="w-full text-gray-800 hover:text-gowith-dark-blue">Non-Profits</Link>
+                <Link to="/industries/non-profits" className="w-full text-gray-800 hover:text-gowith-dark-blue">Non-Profits</Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -239,7 +239,7 @@ const Navbar = () => {
                 <Link to="/industries/professional-services" className="text-gowith-light-blue hover:text-white" onClick={() => setIsOpen(false)}>
                   Professional Services
                 </Link>
-                <Link to="/industries/non-profit" className="text-gowith-light-blue hover:text-white" onClick={() => setIsOpen(false)}>
+                <Link to="/industries/non-profits" className="text-gowith-light-blue hover:text-white" onClick={() => setIsOpen(false)}>
                   Non-Profits
                 </Link>
               </div>

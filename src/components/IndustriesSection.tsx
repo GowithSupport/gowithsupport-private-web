@@ -17,7 +17,7 @@ const IndustriesSection = () => {
     {
       icon: <Scale className="w-8 h-8" />,
       name: "Law Firms",
-      link: "/industries/law-firms"
+      link: "/industries/legal"
     },
     {
       icon: <Briefcase className="w-8 h-8" />,
@@ -32,7 +32,7 @@ const IndustriesSection = () => {
     {
       icon: <Rocket className="w-8 h-8" />,
       name: "Technology & Startups",
-      link: "/industries/technology-startups"
+      link: "/industries/technology"
     },
     {
       icon: <Film className="w-8 h-8" />,
