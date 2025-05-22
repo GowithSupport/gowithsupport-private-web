@@ -1,10 +1,7 @@
-
 import { Button } from './ui/button';
 import { Phone } from 'lucide-react';
-
 const CtaSection = () => {
-  return (
-    <section className="py-20 bg-gowith-dark-blue">
+  return <section className="py-20 bg-gowith-dark-blue">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -21,7 +18,7 @@ const CtaSection = () => {
             
             <a href="tel:+18885551234" className="flex items-center gap-2 text-white hover:text-gowith-light-blue transition-colors text-lg font-medium">
               <Phone className="w-5 h-5" />
-              <span>(888) 555-1234</span>
+              <span>(949) 288-5812</span>
             </a>
           </div>
           
@@ -30,8 +27,6 @@ const CtaSection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CtaSection;

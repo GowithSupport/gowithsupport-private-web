@@ -1,19 +1,12 @@
-
 import React from 'react';
-
 const OurStory = () => {
-  return (
-    <section className="py-20 bg-white">
+  return <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12 max-w-6xl mx-auto">
           <div className="md:w-1/2">
             <div className="relative">
               <div className="bg-gowith-medium-blue w-full h-full absolute top-4 left-4 rounded-lg"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
-                alt="Team collaboration" 
-                className="rounded-lg shadow-md relative z-10 w-full"
-              />
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Team collaboration" className="rounded-lg shadow-md relative z-10 w-full" />
             </div>
           </div>
           <div className="md:w-1/2">
@@ -30,17 +23,11 @@ const OurStory = () => {
               We specialize in all technologies that support business growth and innovation. From cybersecurity to cloud services, from IT strategy to managed services, our team brings expertise and dedication to every client relationship.
             </p>
             <div className="mt-8">
-              <img 
-                src="/lovable-uploads/7a7134b5-b2bf-4282-8463-5b9e5f90695a.png" 
-                alt="Our Store" 
-                className="rounded-lg shadow-md max-w-full h-auto"
-              />
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default OurStory;
