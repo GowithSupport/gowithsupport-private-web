@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 interface ContactFormProps {
   formTitle?: string;
@@ -34,6 +34,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     employeeCount: "",
     industry: "",
     requestConsultation: false,
+    subscribeNewsletter: false,
     privacyAgreed: false
   });
   
@@ -55,7 +56,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.privacyAgreed) {
@@ -65,10 +66,35 @@ const ContactForm: React.FC<ContactFormProps> = ({
     
     setIsSubmitting(true);
     
-    // Simulating API call
-    setTimeout(() => {
+    // Prepare data for email
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      fullName: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      phone: formData.phone,
+      company: formData.company,
+      subject: formData.subject || `New ${formType} inquiry`,
+      message: formData.message,
+      formType: formType,
+      requestConsultation: formData.requestConsultation ? "Yes" : "No",
+      subscribeNewsletter: formData.subscribeNewsletter ? "Yes" : "No",
+      preferredDate: formData.preferredDate,
+      employeeCount: formData.employeeCount,
+      industry: formData.industry,
+    };
+
+    try {
+      // Replace these with your actual EmailJS credentials
+      // You'll need to sign up at emailjs.com and create templates
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // e.g., 'office365'
+        'YOUR_TEMPLATE_ID',
+        templateParams,
+        'YOUR_PUBLIC_KEY'
+      );
+      
       toast.success("Thank you for contacting us! We'll be in touch soon.");
-      setIsSubmitting(false);
       
       // Reset form
       setFormData({
@@ -83,6 +109,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
         employeeCount: "",
         industry: "",
         requestConsultation: false,
+        subscribeNewsletter: false,
         privacyAgreed: false
       });
       
@@ -90,8 +117,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
       if (onSubmitSuccess) {
         onSubmitSuccess();
       }
-      
-    }, 1500);
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast.error("Failed to send your message. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   // Dynamically render fields based on formType
@@ -303,6 +334,21 @@ const ContactForm: React.FC<ContactFormProps> = ({
             </div>
           </div>
         )}
+        
+        <div className="mb-4">
+          <div className="flex items-start">
+            <input
+              id="subscribeNewsletter"
+              type="checkbox"
+              checked={formData.subscribeNewsletter}
+              onChange={handleCheckboxChange}
+              className="h-4 w-4 mt-1 border-gray-300 rounded text-gowith-medium-blue focus:ring-gowith-medium-blue"
+            />
+            <label htmlFor="subscribeNewsletter" className="ml-2 block text-sm text-gray-600">
+              Subscribe to our newsletter for IT tips and updates
+            </label>
+          </div>
+        </div>
         
         <div className="mb-6">
           <div className="flex items-start">
