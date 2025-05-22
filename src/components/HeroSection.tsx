@@ -5,9 +5,16 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return (
     <section className="relative bg-white min-h-[80vh] flex items-center pt-24">
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/330e0225-2310-4395-bbb5-72dddb56a591.png" 
+          alt="IT Business Meeting" 
+          className="w-full h-full object-cover" 
+        />
+      </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="max-w-3xl mb-8 md:mb-0">
+          <div className="max-w-3xl mb-8 md:mb-0 bg-white bg-opacity-90 p-6 rounded-lg shadow-lg">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gowith-dark-blue mb-6 leading-tight">
               Transforming Business Through Strategic IT Solutions
             </h1>
@@ -25,13 +32,6 @@ const HeroSection = () => {
                 <Link to="/services">Explore Our Services</Link>
               </Button>
             </div>
-          </div>
-          <div className="md:w-1/2 flex justify-center items-center">
-            <img 
-              src="/lovable-uploads/330e0225-2310-4395-bbb5-72dddb56a591.png" 
-              alt="IT Business Meeting" 
-              className="w-full h-auto object-cover rounded-lg shadow-lg" 
-            />
           </div>
         </div>
       </div>
