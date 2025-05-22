@@ -70,6 +70,21 @@ const Footer = () => {
                   IT Strategy
                 </Link>
               </li>
+              <li>
+                <Link to="/services/business-comms" className="text-gray-300 hover:text-white transition-colors">
+                  Business Comms Platform
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/face-id-auth" className="text-gray-300 hover:text-white transition-colors">
+                  Face ID Auth
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/web-dev-automation" className="text-gray-300 hover:text-white transition-colors">
+                  Web Dev Automation
+                </Link>
+              </li>
             </ul>
           </div>
 

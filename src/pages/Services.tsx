@@ -1,48 +1,88 @@
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ServiceCard from "../components/ServiceCard";
 import CtaSection from "../components/CtaSection";
-import { Server, ShieldCheck, Cloud, Briefcase, LineChart } from "lucide-react";
+import { 
+  Server, 
+  ShieldCheck, 
+  Cloud, 
+  Briefcase, 
+  LineChart, 
+  Headphones, 
+  Fingerprint, 
+  Code 
+} from "lucide-react";
+
 const Services = () => {
-  const services = [{
-    icon: <Server className="w-6 h-6 text-white" />,
-    title: "Managed IT Services",
-    description: "Comprehensive support for your entire IT infrastructure",
-    link: "/services/managed-it",
-    features: ["24/7 monitoring and support", "Proactive maintenance and updates", "Help desk and technical support", "Network management and optimization", "Hardware and software management"]
-  }, {
-    icon: <ShieldCheck className="w-6 h-6 text-white" />,
-    title: "Cybersecurity Services",
-    description: "Advanced protection against evolving threats",
-    link: "/services/cybersecurity",
-    features: ["Security assessments and audits", "Endpoint protection and detection", "Email security and anti-phishing", "Security awareness training", "Incident response planning"]
-  }, {
-    icon: <Cloud className="w-6 h-6 text-white" />,
-    title: "Managed Cloud Services",
-    description: "Secure, scalable cloud infrastructure solutions",
-    link: "/services/cloud",
-    features: ["Cloud migration and strategy", "Infrastructure optimization", "Backup and disaster recovery", "Cloud security and compliance", "Ongoing cloud management"]
-  }, {
-    icon: <Briefcase className="w-6 h-6 text-white" />,
-    title: "Professional Services",
-    description: "Expert guidance for strategic IT initiatives",
-    link: "/services/professional",
-    features: ["IT project management", "Technology implementation", "Systems integration", "Software development", "Business process automation"]
-  }, {
-    icon: <LineChart className="w-6 h-6 text-white" />,
-    title: "IT Strategy",
-    description: "Aligning technology with business goals",
-    link: "/services/it-strategy",
-    features: ["Technology roadmapping", "IT budget planning", "Digital transformation", "IT governance", "Strategic technology consultation"]
-  }];
-  return <>
+  const services = [
+    {
+      icon: <Server className="w-6 h-6 text-white" />,
+      title: "Managed IT Services",
+      description: "Comprehensive support for your entire IT infrastructure",
+      link: "/services/managed-it",
+      features: ["24/7 monitoring and support", "Proactive maintenance and updates", "Help desk and technical support", "Network management and optimization", "Hardware and software management"]
+    }, 
+    {
+      icon: <ShieldCheck className="w-6 h-6 text-white" />,
+      title: "Cybersecurity Services",
+      description: "Advanced protection against evolving threats",
+      link: "/services/cybersecurity",
+      features: ["Security assessments and audits", "Endpoint protection and detection", "Email security and anti-phishing", "Security awareness training", "Incident response planning"]
+    }, 
+    {
+      icon: <Cloud className="w-6 h-6 text-white" />,
+      title: "Managed Cloud Services",
+      description: "Secure, scalable cloud infrastructure solutions",
+      link: "/services/cloud",
+      features: ["Cloud migration and strategy", "Infrastructure optimization", "Backup and disaster recovery", "Cloud security and compliance", "Ongoing cloud management"]
+    }, 
+    {
+      icon: <Briefcase className="w-6 h-6 text-white" />,
+      title: "Professional Services",
+      description: "Expert guidance for strategic IT initiatives",
+      link: "/services/professional",
+      features: ["IT project management", "Technology implementation", "Systems integration", "Software development", "Business process automation"]
+    }, 
+    {
+      icon: <LineChart className="w-6 h-6 text-white" />,
+      title: "IT Strategy",
+      description: "Aligning technology with business goals",
+      link: "/services/it-strategy",
+      features: ["Technology roadmapping", "IT budget planning", "Digital transformation", "IT governance", "Strategic technology consultation"]
+    },
+    {
+      icon: <Headphones className="w-6 h-6 text-white" />,
+      title: "Business Comms Platform",
+      description: "Unified communications for modern businesses",
+      link: "/services/business-comms",
+      features: ["Voice, messaging, and video integration", "Advanced call center capabilities", "CRM integration", "Business productivity tools", "Enterprise-grade security"]
+    },
+    {
+      icon: <Fingerprint className="w-6 h-6 text-white" />,
+      title: "Face ID Auth",
+      description: "Secure biometric authentication solutions",
+      link: "/services/face-id-auth",
+      features: ["Web and mobile authentication", "Anti-spoofing technology", "Developer-friendly integration", "Enterprise security compliance", "Seamless user experience"]
+    },
+    {
+      icon: <Code className="w-6 h-6 text-white" />,
+      title: "Web Dev Automation",
+      description: "AI-powered development acceleration",
+      link: "/services/web-dev-automation",
+      features: ["AI code generation", "No-code visual development", "Automated testing and deployment", "Intelligent project management", "Development process optimization"]
+    }
+  ];
+
+  return (
+    <>
       <Navbar />
       <main>
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-r from-gowith-dark-blue to-gowith-medium-blue">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-4xl font-bold text-white mb-6 md:text-2xl">
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Comprehensive IT Services for Growing Businesses
               </h1>
               <p className="text-xl text-gowith-light-blue mb-8">
@@ -65,7 +105,16 @@ const Services = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => <ServiceCard key={index} icon={service.icon} title={service.title} description={service.description} link={service.link} features={service.features} />)}
+              {services.map((service, index) => (
+                <ServiceCard 
+                  key={index} 
+                  icon={service.icon} 
+                  title={service.title} 
+                  description={service.description} 
+                  link={service.link} 
+                  features={service.features} 
+                />
+              ))}
             </div>
           </div>
         </section>
@@ -213,6 +262,7 @@ const Services = () => {
         <CtaSection />
       </main>
       <Footer />
-    </>;
+    </>
+  );
 };
 export default Services;

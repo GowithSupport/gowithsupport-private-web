@@ -23,6 +23,9 @@ import Cybersecurity from "./pages/services/Cybersecurity";
 import CloudServices from "./pages/services/CloudServices";
 import ProfessionalServices from "./pages/services/ProfessionalServices";
 import ITStrategy from "./pages/services/ITStrategy";
+import BusinessComms from "./pages/services/BusinessComms";
+import FaceIDAuth from "./pages/services/FaceIDAuth";
+import WebDevAutomation from "./pages/services/WebDevAutomation";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +43,9 @@ const App = () => (
           <Route path="/services/cloud" element={<CloudServices />} />
           <Route path="/services/professional" element={<ProfessionalServices />} />
           <Route path="/services/it-strategy" element={<ITStrategy />} />
+          <Route path="/services/business-comms" element={<BusinessComms />} />
+          <Route path="/services/face-id-auth" element={<FaceIDAuth />} />
+          <Route path="/services/web-dev-automation" element={<WebDevAutomation />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/industries" element={<Industries />} />

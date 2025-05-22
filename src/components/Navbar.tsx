@@ -83,6 +83,15 @@ const Navbar = () => {
               <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
                 <Link to="/services/it-strategy" className="w-full text-gray-800 hover:text-gowith-dark-blue">IT Strategy</Link>
               </DropdownMenuItem>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/business-comms" className="w-full text-gray-800 hover:text-gowith-dark-blue">Business Comms Platform</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/face-id-auth" className="w-full text-gray-800 hover:text-gowith-dark-blue">Face ID Auth</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem className="hover:bg-gray-100 px-4 py-2">
+                <Link to="/services/web-dev-automation" className="w-full text-gray-800 hover:text-gowith-dark-blue">Web Dev Automation</Link>
+              </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           
@@ -196,6 +205,15 @@ const Navbar = () => {
                 </Link>
                 <Link to="/services/it-strategy" className="text-gowith-light-blue hover:text-white" onClick={() => setIsOpen(false)}>
                   IT Strategy
+                </Link>
+                <Link to="/services/business-comms" className="text-gowith-light-blue hover:text-white" onClick={() => setIsOpen(false)}>
+                  Business Comms Platform
+                </Link>
+                <Link to="/services/face-id-auth" className="text-gowith-light-blue hover:text-white" onClick={() => setIsOpen(false)}>
+                  Face ID Auth
+                </Link>
+                <Link to="/services/web-dev-automation" className="text-gowith-light-blue hover:text-white" onClick={() => setIsOpen(false)}>
+                  Web Dev Automation
                 </Link>
               </div>
             </div>
