@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -10,199 +9,97 @@ import TechSpecsSection from "../../components/TechSpecsSection";
 import FinalCTA from "../../components/FinalCTA";
 import ContactForm from "../../components/ContactForm";
 import { Shield, Fingerprint } from 'lucide-react';
-
 const FaceIDAuth = () => {
-  const platformFeatures = [
-    {
-      icon: <Shield className="h-6 w-6 text-white" />,
-      title: "Multi-Platform Support",
-      description: "Implement facial authentication across all your applications.",
-      items: [
-        "Web applications with JavaScript SDK integration",
-        "Native iOS and Android mobile applications",
-        "Cross-platform compatibility with unified API",
-        "Responsive design for all device types",
-        "Browser-based authentication without app downloads"
-      ]
-    },
-    {
-      icon: <Fingerprint className="h-6 w-6 text-white" />,
-      title: "Advanced Security Features",
-      description: "Protect against sophisticated spoofing attacks.",
-      items: [
-        "Liveness detection to prevent photo and video spoofing",
-        "Anti-deepfake technology for ultimate security",
-        "Mask detection with enhanced recognition algorithms",
-        "Real-time threat analysis and fraud prevention",
-        "Encrypted biometric data storage and transmission"
-      ]
-    },
-    {
-      icon: <Shield className="h-6 w-6 text-white" />,
-      title: "Developer-Friendly Integration",
-      description: "Quick and easy implementation for developers.",
-      items: [
-        "RESTful API with comprehensive documentation",
-        "JavaScript SDK for rapid web implementation",
-        "Native mobile SDKs for iOS and Android",
-        "Customizable UI components and workflows",
-        "Real-time face detection and automatic capture"
-      ]
-    },
-    {
-      icon: <Fingerprint className="h-6 w-6 text-white" />,
-      title: "Enterprise-Grade Protection",
-      description: "Meet the highest standards of security and compliance.",
-      items: [
-        "99.8% accuracy rate across all demographics",
-        "Sub-second authentication response times",
-        "GDPR and privacy regulation compliance",
-        "On-premises deployment options available",
-        "Comprehensive audit trails and analytics"
-      ]
-    }
-  ];
-
-  const functionalities = [
-    {
-      icon: <Shield className="h-6 w-6 text-white" />,
-      title: "Face Enrollment",
-      description: "Simple and secure user onboarding process.",
-      items: [
-        "Seamless user onboarding with guided photo capture",
-        "Multiple angle verification for enhanced accuracy",
-        "Quality assessment and feedback during enrollment",
-        "Secure storage of biometric templates",
-        "Easy re-enrollment for template updates"
-      ]
-    },
-    {
-      icon: <Fingerprint className="h-6 w-6 text-white" />,
-      title: "Authentication Process",
-      description: "Fast, accurate identity verification.",
-      items: [
-        "Real-time face detection and positioning guidance",
-        "Instant verification with visual feedback",
-        "Fallback options for accessibility compliance",
-        "Multi-factor authentication integration",
-        "Session management and security controls"
-      ]
-    },
-    {
-      icon: <Shield className="h-6 w-6 text-white" />,
-      title: "Administrative Dashboard",
-      description: "Complete visibility and control.",
-      items: [
-        "Comprehensive analytics and usage reporting",
-        "User management and access controls",
-        "Security event monitoring and alerts",
-        "Performance metrics and optimization insights",
-        "Compliance reporting and audit tools"
-      ]
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Enhanced Security",
-      description: "Eliminate password-related vulnerabilities while providing protection against sophisticated attack methods including deepfakes and presentation attacks."
-    },
-    {
-      icon: <Fingerprint className="h-6 w-6" />,
-      title: "Improved User Experience",
-      description: "Reduce friction in the authentication process, eliminating the need to remember passwords while providing instant access with just a glance."
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Reduced Support Costs",
-      description: "Minimize password reset requests and user lockout issues, significantly reducing help desk burden and operational costs."
-    },
-    {
-      icon: <Fingerprint className="h-6 w-6" />,
-      title: "Compliance Support",
-      description: "Meet stringent security requirements for regulated industries while maintaining user privacy and data protection standards."
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Quick Integration",
-      description: "Get up and running in minutes with our comprehensive SDK and API, supported by detailed documentation and implementation guides."
-    }
-  ];
-
-  const useCases = [
-    {
-      icon: <Shield className="h-6 w-6 text-white" />,
-      title: "Financial Services",
-      description: "Secure your banking and investment platforms.",
-      items: [
-        "Secure banking applications and transaction authorization",
-        "Investment platform access and high-value transaction verification",
-        "Insurance claim processing and customer verification"
-      ]
-    },
-    {
-      icon: <Fingerprint className="h-6 w-6 text-white" />,
-      title: "Healthcare",
-      description: "Protect sensitive patient information.",
-      items: [
-        "Patient portal access and medical record protection",
-        "Telehealth platform authentication",
-        "Prescription and treatment authorization"
-      ]
-    },
-    {
-      icon: <Shield className="h-6 w-6 text-white" />,
-      title: "E-commerce",
-      description: "Prevent fraud and secure user accounts.",
-      items: [
-        "Customer account protection and secure checkout",
-        "Fraud prevention for high-value purchases",
-        "Subscription service access control"
-      ]
-    },
-    {
-      icon: <Fingerprint className="h-6 w-6 text-white" />,
-      title: "Enterprise Applications",
-      description: "Secure corporate resources and data.",
-      items: [
-        "Employee access to sensitive systems and data",
-        "Time and attendance tracking",
-        "Secure document and application access"
-      ]
-    }
-  ];
-
-  const techSpecs = [
-    {
-      title: "API Endpoints",
-      items: [
-        "Face enrollment and template creation",
-        "Real-time verification and authentication",
-        "Liveness detection and spoof prevention",
-        "User management and administrative functions"
-      ]
-    },
-    {
-      title: "Security Standards",
-      items: [
-        "AES-256 encryption for data transmission",
-        "ISO 27001 and SOC 2 Type II compliance",
-        "GDPR and CCPA privacy regulation adherence",
-        "Zero-knowledge architecture options"
-      ]
-    }
-  ];
-
-  return (
-    <>
+  const platformFeatures = [{
+    icon: <Shield className="h-6 w-6 text-white" />,
+    title: "Multi-Platform Support",
+    description: "Implement facial authentication across all your applications.",
+    items: ["Web applications with JavaScript SDK integration", "Native iOS and Android mobile applications", "Cross-platform compatibility with unified API", "Responsive design for all device types", "Browser-based authentication without app downloads"]
+  }, {
+    icon: <Fingerprint className="h-6 w-6 text-white" />,
+    title: "Advanced Security Features",
+    description: "Protect against sophisticated spoofing attacks.",
+    items: ["Liveness detection to prevent photo and video spoofing", "Anti-deepfake technology for ultimate security", "Mask detection with enhanced recognition algorithms", "Real-time threat analysis and fraud prevention", "Encrypted biometric data storage and transmission"]
+  }, {
+    icon: <Shield className="h-6 w-6 text-white" />,
+    title: "Developer-Friendly Integration",
+    description: "Quick and easy implementation for developers.",
+    items: ["RESTful API with comprehensive documentation", "JavaScript SDK for rapid web implementation", "Native mobile SDKs for iOS and Android", "Customizable UI components and workflows", "Real-time face detection and automatic capture"]
+  }, {
+    icon: <Fingerprint className="h-6 w-6 text-white" />,
+    title: "Enterprise-Grade Protection",
+    description: "Meet the highest standards of security and compliance.",
+    items: ["99.8% accuracy rate across all demographics", "Sub-second authentication response times", "GDPR and privacy regulation compliance", "On-premises deployment options available", "Comprehensive audit trails and analytics"]
+  }];
+  const functionalities = [{
+    icon: <Shield className="h-6 w-6 text-white" />,
+    title: "Face Enrollment",
+    description: "Simple and secure user onboarding process.",
+    items: ["Seamless user onboarding with guided photo capture", "Multiple angle verification for enhanced accuracy", "Quality assessment and feedback during enrollment", "Secure storage of biometric templates", "Easy re-enrollment for template updates"]
+  }, {
+    icon: <Fingerprint className="h-6 w-6 text-white" />,
+    title: "Authentication Process",
+    description: "Fast, accurate identity verification.",
+    items: ["Real-time face detection and positioning guidance", "Instant verification with visual feedback", "Fallback options for accessibility compliance", "Multi-factor authentication integration", "Session management and security controls"]
+  }, {
+    icon: <Shield className="h-6 w-6 text-white" />,
+    title: "Administrative Dashboard",
+    description: "Complete visibility and control.",
+    items: ["Comprehensive analytics and usage reporting", "User management and access controls", "Security event monitoring and alerts", "Performance metrics and optimization insights", "Compliance reporting and audit tools"]
+  }];
+  const benefits = [{
+    icon: <Shield className="h-6 w-6" />,
+    title: "Enhanced Security",
+    description: "Eliminate password-related vulnerabilities while providing protection against sophisticated attack methods including deepfakes and presentation attacks."
+  }, {
+    icon: <Fingerprint className="h-6 w-6" />,
+    title: "Improved User Experience",
+    description: "Reduce friction in the authentication process, eliminating the need to remember passwords while providing instant access with just a glance."
+  }, {
+    icon: <Shield className="h-6 w-6" />,
+    title: "Reduced Support Costs",
+    description: "Minimize password reset requests and user lockout issues, significantly reducing help desk burden and operational costs."
+  }, {
+    icon: <Fingerprint className="h-6 w-6" />,
+    title: "Compliance Support",
+    description: "Meet stringent security requirements for regulated industries while maintaining user privacy and data protection standards."
+  }, {
+    icon: <Shield className="h-6 w-6" />,
+    title: "Quick Integration",
+    description: "Get up and running in minutes with our comprehensive SDK and API, supported by detailed documentation and implementation guides."
+  }];
+  const useCases = [{
+    icon: <Shield className="h-6 w-6 text-white" />,
+    title: "Financial Services",
+    description: "Secure your banking and investment platforms.",
+    items: ["Secure banking applications and transaction authorization", "Investment platform access and high-value transaction verification", "Insurance claim processing and customer verification"]
+  }, {
+    icon: <Fingerprint className="h-6 w-6 text-white" />,
+    title: "Healthcare",
+    description: "Protect sensitive patient information.",
+    items: ["Patient portal access and medical record protection", "Telehealth platform authentication", "Prescription and treatment authorization"]
+  }, {
+    icon: <Shield className="h-6 w-6 text-white" />,
+    title: "E-commerce",
+    description: "Prevent fraud and secure user accounts.",
+    items: ["Customer account protection and secure checkout", "Fraud prevention for high-value purchases", "Subscription service access control"]
+  }, {
+    icon: <Fingerprint className="h-6 w-6 text-white" />,
+    title: "Enterprise Applications",
+    description: "Secure corporate resources and data.",
+    items: ["Employee access to sensitive systems and data", "Time and attendance tracking", "Secure document and application access"]
+  }];
+  const techSpecs = [{
+    title: "API Endpoints",
+    items: ["Face enrollment and template creation", "Real-time verification and authentication", "Liveness detection and spoof prevention", "User management and administrative functions"]
+  }, {
+    title: "Security Standards",
+    items: ["AES-256 encryption for data transmission", "ISO 27001 and SOC 2 Type II compliance", "GDPR and CCPA privacy regulation adherence", "Zero-knowledge architecture options"]
+  }];
+  return <>
       <Navbar />
       <main>
-        <ServiceHero 
-          title="Advanced Facial Authentication for Web & Mobile" 
-          subtitle="Secure, seamless user authentication using cutting-edge facial recognition technology" 
-          backgroundClass="from-gray-900 to-gowith-dark-blue"
-        />
+        <ServiceHero title="Advanced Facial Authentication for Web & Mobile" subtitle="Secure, seamless user authentication using cutting-edge facial recognition technology" backgroundClass="from-gray-900 to-gowith-dark-blue" />
         
         {/* Overview Section */}
         <section className="py-16 bg-white">
@@ -214,11 +111,7 @@ const FaceIDAuth = () => {
               </p>
               <div className="mt-10 relative">
                 <div className="aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-                  <img 
-                    src="https://images.unsplash.com/photo-1583195648430-7c4d9efa8d7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                    alt="Face ID Authentication Technology" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img alt="Face ID Authentication Technology" className="w-full h-full object-cover" src="/lovable-uploads/b695c5c9-2951-42e6-b1fa-8aca4db367e3.png" />
                 </div>
                 <div className="absolute -bottom-6 right-0 bg-gowith-orange p-6 rounded-lg shadow-xl max-w-xs">
                   <p className="text-white font-bold">
@@ -258,11 +151,7 @@ const FaceIDAuth = () => {
         <BenefitsSection benefits={benefits} />
         
         {/* Use Cases */}
-        <UseCaseSection 
-          title="Use Cases" 
-          subtitle="How organizations in different industries benefit from Face ID Authentication"
-          useCases={useCases} 
-        />
+        <UseCaseSection title="Use Cases" subtitle="How organizations in different industries benefit from Face ID Authentication" useCases={useCases} />
         
         {/* Technical Specifications */}
         <TechSpecsSection specGroups={techSpecs} />
@@ -299,27 +188,15 @@ const FaceIDAuth = () => {
                 </div>
               </div>
               
-              <ContactForm 
-                formTitle="Start Your Free Trial" 
-                formDescription="Fill out the form below to begin your 30-day free trial of our Face ID Authentication solution."
-                buttonText="Start Free Trial" 
-                formType="trial"
-              />
+              <ContactForm formTitle="Start Your Free Trial" formDescription="Fill out the form below to begin your 30-day free trial of our Face ID Authentication solution." buttonText="Start Free Trial" formType="trial" />
             </div>
           </div>
         </section>
         
         {/* Final CTA */}
-        <FinalCTA 
-          headline="Revolutionize Your Authentication Security" 
-          buttonText="Start Your Free Trial" 
-          buttonLink="/contact"
-          backgroundClass="bg-gradient-to-r from-gray-900 to-gowith-dark-blue"
-        />
+        <FinalCTA headline="Revolutionize Your Authentication Security" buttonText="Start Your Free Trial" buttonLink="/contact" backgroundClass="bg-gradient-to-r from-gray-900 to-gowith-dark-blue" />
       </main>
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default FaceIDAuth;
