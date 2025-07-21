@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return <section className="relative bg-transparent min-h-[80vh] flex items-end justify-center">
       <div className="absolute inset-0 z-0">
-        <img src="/lovable-uploads/12662dd4-ba99-4399-9eda-1c217dd90816.png" alt="IT Business Meeting" className="w-full h-full object-cover" style={{
+        <img src="/lovable-uploads/4cc3ba58-2967-4a01-a0f1-bb9543067186.png" alt="IT Business Meeting" className="w-full h-full object-cover" style={{
         filter: 'drop-shadow(0 0 10px rgba(255,255,255,0.2))',
         backgroundColor: 'transparent'
       }} />
