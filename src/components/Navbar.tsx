@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src="/lovable-uploads/edb9dbfe-335c-4145-a6a2-f0e188e64fbb.png" alt="GowithSupport Logo" className="h-28 w-auto" />
+          <img src="/lovable-uploads/1d30a686-016e-4cfb-8483-888ef042792d.png" alt="GowithSupport Logo" className="h-28 w-auto" />
         </Link>
 
         {/* Desktop Navigation with enhanced dropdown menus */}
